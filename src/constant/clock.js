@@ -21,25 +21,25 @@ export const clocks = [
     feedback: 'Rolex1',
     name: 'Rolex1',
     company: 'Rolex1',
-    imgurl: '/assets/images/watch-1.png',
+    imgurl: '/images/watch-1.png',
   },
   {
     feedback: 'Rolex2',
     name: 'Rolex2',
     company: 'Rolex2',
-    imgurl: '/assets/images/watch-2.png',
+    imgurl: '/images/watch-2.png',
   },
   {
     feedback: 'Rolex3',
     name: 'Rolex3',
     company: 'Rolex3',
-    imgurl: '/assets/images/watch-3.png',
+    imgurl: '/images/watch-3.png',
   },
   {
     feedback: 'Rolex4',
     name: 'Rolex4',
     company: 'Rolex4',
-    imgurl: '/assets/images/watch-4.png',
+    imgurl: '/images/watch-4.png',
   },
 ];
 
@@ -47,7 +47,7 @@ export const watchContact = {
   feedback: 'Rolex4',
   name: 'Rolex4',
   company: 'Rolex4',
-  imgurl: '/assets/images/watch-4.png',
+  imgurl: '/images/watch-4.png',
 };
 
 export const pricing = [
@@ -57,7 +57,7 @@ export const pricing = [
     category: 'Normal',
     range: '<$500',
     description: 'Beautiful special watches to wear daily',
-    color: 'bg-primary/50',
+    color: 'bg-primary-50/50',
   },
   {
     id: '2',
@@ -65,7 +65,7 @@ export const pricing = [
     category: 'Advanced',
     range: '>$1000',
     description: 'watches that will blow your mind with its originality',
-    color: 'bg-primary',
+    color: 'bg-primary-50',
   },
   {
     id: '3',
@@ -73,7 +73,7 @@ export const pricing = [
     category: 'Intermediate',
     range: '$500-$1000',
     description: 'The best value for money',
-    color: 'bg-primary/50',
+    color: 'bg-primary-50/50',
   },
 ];
 

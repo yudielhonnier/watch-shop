@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-import ClockImage from '../asset/images/inspiration.jpeg';
+import ClockImage from '../images/inspiration.jpeg';
 
 interface ICard {
   name: string;

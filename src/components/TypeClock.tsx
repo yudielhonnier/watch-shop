@@ -14,7 +14,7 @@ const TypeClock = ({ name, typeSelected, handleClick }: ITypeClock) => {
       <p
         className={`${
           name === typeSelected
-            ? 'border-custom-yellow border-b-2 pb-[3px]'
+            ? 'border-b-2 border-custom-yellow pb-[3px]'
             : ''
         }`}
       >

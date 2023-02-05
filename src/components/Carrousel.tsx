@@ -86,7 +86,7 @@ const Carrousel = ({ showTypes }: ICarrousel) => {
                       alt={clockTypes[currentIndex].name}
                       className='z-[999]  rounded-lg object-contain'
                     />
-                    <div className='bg-box-primary absolute top-4 z-[0] h-[320px] w-[270px] rounded-lg'></div>
+                    <div className='absolute top-4 z-[0] h-[320px] w-[270px] rounded-lg bg-box-primary'></div>
                   </motion.div>
                 ))}
               </div>

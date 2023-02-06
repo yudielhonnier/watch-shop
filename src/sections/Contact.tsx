@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 
@@ -7,6 +8,7 @@ import PageTitle from '@/components/PageTitle';
 import { IPaddingRight } from '@/constant/types';
 
 import { watchContact } from '../constant/clock';
+import { clockVariants } from '../utils/motion';
 
 const Contact = ({ pr }: IPaddingRight) => {
   return (
@@ -14,17 +16,32 @@ const Contact = ({ pr }: IPaddingRight) => {
       className={` pl-24 ${pr && 'pr-24'} h-[100vh]  bg-gradient-contact pt-16`}
       id='contact'
     >
-      <PageTitle title='Contact' subtitle='' />
+      <motion.div
+        initial='hidden'
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 1.5, delayChildren: 0.5 }}
+      >
+        <PageTitle title='Contact' subtitle='' />
+      </motion.div>
       <div className=' relative flex flex-col items-center gap-6 pt-8 '>
         {/* todo:add media querys */}
-        <div className='absolute right-40 top-5 h-[260px] w-[250px]'>
+        <motion.div
+          variants={clockVariants('left')}
+          initial='hidden'
+          whileInView='show'
+          className='absolute right-40 top-5 h-[260px] w-[250px]'
+        >
           <Image
             fill
+            sizes='(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                       33vw'
+            priority={true}
             src={watchContact.imgurl}
             alt={watchContact.name}
             className='z-[999]  rounded-lg object-contain '
           />
-        </div>
+        </motion.div>
         <div className='flex w-[80%] flex-col  '>
           <div
             // todo:remove bg-yellow when the img bg is posted

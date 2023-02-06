@@ -22,7 +22,7 @@ export const navVariants = {
 export const slideIn = (direction, type, delay, duration) => ({
   hidden: {
     x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
-    y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
+    y: direction === 'up' ? '100%' : direction === 'down' ? '-100%' : 0,
   },
   show: {
     x: 0,
@@ -107,7 +107,7 @@ export const fadeIn = (direction, type, delay, duration) => ({
   },
 });
 
-export const planetVariants = (direction) => ({
+export const clockVariants = (direction) => ({
   hidden: {
     x: direction === 'left' ? '-100%' : '100%',
     rotate: 120,
@@ -118,7 +118,7 @@ export const planetVariants = (direction) => ({
     transition: {
       type: 'spring',
       duration: 1.8,
-      delay: 0.5,
+      delay: 0.1,
     },
   },
 });

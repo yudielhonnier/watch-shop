@@ -40,7 +40,12 @@ const Carrousel = ({ showTypes }: ICarrousel) => {
     <>
       {clockTypes.length && (
         <>
-          <div className='mt-8 flex flex-col    items-start  '>
+          <motion.div
+            variants={slideIn('right', 'tween', 0.5, 0.5)}
+            initial='hidden'
+            whileInView='show'
+            className='mt-8 flex flex-col    items-start  '
+          >
             <div className={`px-3 py-8 ${styles.subtitles}`}>Collections</div>
             {showTypes && (
               <div
@@ -64,12 +69,7 @@ const Carrousel = ({ showTypes }: ICarrousel) => {
               </div>
             )}
 
-            <motion.div
-              variants={slideIn('right', 'tween', 0.2, 1)}
-              initial='hidden'
-              whileInView='show'
-              className='  h-[500px] w-[750px] rounded-2xl py-8 shadow transition-all delay-300'
-            >
+            <div className='  h-[500px] w-[750px] rounded-2xl py-8 shadow transition-all delay-300'>
               <div
                 className=' h-[375px] w-[760px] overflow-x-scroll whitespace-nowrap'
                 onMouseEnter={handleOnMouseEnter}
@@ -97,8 +97,8 @@ const Carrousel = ({ showTypes }: ICarrousel) => {
                   </div>
                 ))}
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </>
       )}
     </>

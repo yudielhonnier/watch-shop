@@ -7,9 +7,9 @@ import React, { useRef, useState } from 'react';
 import { ICarrousel } from '@/constant/types';
 
 import TypeClock from './TypeClock';
-// import ClockImage from '../assets/images/inspiration.jpeg'
 import { clocks, clockTypes } from '../constant/clock';
-import { styles } from '../constant/styles';
+import { styles } from '../styles/styles';
+import { slideIn } from '../utils/motion';
 
 // todo:add DIV POSITION TO RECALCULATE MOUSE POSITION
 const Carrousel = ({ showTypes }: ICarrousel) => {
@@ -64,9 +64,14 @@ const Carrousel = ({ showTypes }: ICarrousel) => {
               </div>
             )}
 
-            <div className=' easy-in-out h-[500px]   w-[750px] rounded-2xl py-8 shadow transition-all delay-300 '>
+            <motion.div
+              variants={slideIn('right', 'tween', 0.2, 1)}
+              initial='hidden'
+              whileInView='show'
+              className='  h-[500px] w-[750px] rounded-2xl py-8 shadow transition-all delay-300'
+            >
               <div
-                className='h-[375px] w-[760px] overflow-x-scroll whitespace-nowrap'
+                className=' h-[375px] w-[760px] overflow-x-scroll whitespace-nowrap'
                 onMouseEnter={handleOnMouseEnter}
                 onMouseLeave={handleOnMouseLeave}
                 onDrag={handleOnDrag}
@@ -74,23 +79,25 @@ const Carrousel = ({ showTypes }: ICarrousel) => {
                 ref={carrouselRef}
               >
                 {clocks.map((c, i) => (
-                  <motion.div
-                    whileInView={{ opacity: [0, 1] }}
-                    transition={{ duration: 0.5, type: 'tween' }}
+                  <div
                     key={c.name}
                     className='relative inline-block h-[350px]  w-[300px] p-3'
                   >
                     <Image
                       fill
+                      sizes='(max-width: 768px) 100vw,
+                      (max-width: 1200px) 50vw,
+                       33vw'
+                      priority
                       src={clocks[i].imgurl}
                       alt={clockTypes[currentIndex].name}
                       className='z-[999]  rounded-lg object-contain'
                     />
                     <div className='absolute top-4 z-[0] h-[320px] w-[270px] rounded-lg bg-box-primary'></div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </>
       )}

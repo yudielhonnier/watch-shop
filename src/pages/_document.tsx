@@ -8,7 +8,7 @@ export default function Document() {
           rel='preload'
           href='/fonts/poppins-Medium.ttf'
           as='font'
-          type='font/woff2'
+          type='font/ttf'
           crossOrigin='anonymous'
         />
       </Head>

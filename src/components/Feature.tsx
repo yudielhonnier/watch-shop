@@ -8,7 +8,7 @@ const Feature = ({ name, description, width2, height2, haveTitle }: ICard) => {
       // todo:remove bg-yellow when the img bg is posted
       className={`flex flex-col ${width2} ${height2} `}
     >
-      <div className='bg-yellow text-bold text-primary flex flex-row justify-center rounded-t-lg bg-custom-yellow text-2xl'>
+      <div className='bg-yellow text-bold flex flex-row justify-center rounded-t-lg bg-custom-yellow text-2xl text-black '>
         {haveTitle && <p>Feature</p>}
       </div>
       <div className=' flex-1 break-words rounded-b-lg bg-black/80 px-5'>

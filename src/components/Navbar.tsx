@@ -1,9 +1,17 @@
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';
 
+import { navVariants } from '@/utils/motion';
+
 const Navbar = () => {
   return (
-    <div className='flex h-[12vh] w-full items-center  justify-between  bg-box-primary/70 pr-24 '>
+    <motion.div
+      variants={navVariants}
+      initial='hidden'
+      whileInView='show'
+      className='flex h-[12vh] w-full items-center  justify-between  bg-box-primary/70 pr-24 '
+    >
       <div className='text-extrabold flex items-center justify-between gap-28  pl-24 pr-4 text-xl'>
         <Link href='/#home'>Home</Link>
         <Link href='/#features'>Features</Link>
@@ -15,7 +23,7 @@ const Navbar = () => {
           Explore
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

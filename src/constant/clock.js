@@ -57,15 +57,15 @@ export const pricing = [
     category: 'Normal',
     range: '<$500',
     description: 'Beautiful special watches to wear daily',
-    color: 'bg-primary-50/50',
+    color: 'bg-black/50',
   },
   {
     id: '2',
     isAdvanced: true,
     category: 'Advanced',
     range: '>$1000',
-    description: 'watches that will blow your mind with its originality',
-    color: 'bg-primary-50',
+    description: 'Watches that will blow your mind with its originality',
+    color: 'bg-black',
   },
   {
     id: '3',
@@ -73,7 +73,7 @@ export const pricing = [
     category: 'Intermediate',
     range: '$500-$1000',
     description: 'The best value for money',
-    color: 'bg-primary-50/50',
+    color: 'bg-black/50',
   },
 ];
 

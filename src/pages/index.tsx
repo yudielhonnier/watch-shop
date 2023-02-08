@@ -14,22 +14,25 @@ import * as React from 'react';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
+import Analitics from '@/sections/Analitics';
 import Contact from '@/sections/Contact';
 import Features from '@/sections/Features';
 import Pricing from '@/sections/Pricing';
 import Section1 from '@/sections/Section1';
 
+//todo: add dinamic env like JK
 export default function HomePage() {
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
 
-      <main className='text-white'>
+      <main className='flex flex-col text-white'>
         <Section1 pr={false} />
         <Features pr={true} />
         <Pricing pr={true} />
         <Contact pr={true} />
+        <Analitics pr={true} />
       </main>
     </Layout>
   );

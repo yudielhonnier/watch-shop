@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -9,6 +10,10 @@ module.exports = {
       fontFamily: {
         primary: [...fontFamily.sans],
         poppins: ['var(--poppins-font)', ...fontFamily.sans],
+      },
+      screens: {
+        xs: '475px',
+        ...defaultTheme.screens,
       },
       colors: {
         primary: {

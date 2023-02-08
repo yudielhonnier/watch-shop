@@ -56,7 +56,7 @@ export const pricing = [
     isAdvanced: false,
     category: 'Normal',
     range: '<$500',
-    description: 'Beautiful special watches to wear daily',
+    description: 'Special watches to wear daily',
     color: 'bg-black/50',
   },
   {
@@ -103,3 +103,68 @@ export const features = [
     haveTitle: true,
   },
 ];
+
+export const navLinks = [
+  {
+    id: 'home',
+    title: 'Home',
+  },
+  {
+    id: 'features',
+    title: 'Features',
+  },
+  {
+    id: 'analitics',
+    title: 'Analitics',
+  },
+  {
+    id: 'pricing',
+    title: 'Pricing',
+  },
+  {
+    id: 'contact',
+    title: 'Contact',
+  },
+];
+
+/////////////////////for analitics section
+
+export const analiticsData = [
+  {
+    subject: 'Math',
+    A: 120,
+    B: 110,
+    fullMark: 150,
+  },
+  {
+    subject: 'Chinese',
+    A: 98,
+    B: 130,
+    fullMark: 150,
+  },
+  {
+    subject: 'English',
+    A: 86,
+    B: 130,
+    fullMark: 150,
+  },
+  {
+    subject: 'Geography',
+    A: 99,
+    B: 100,
+    fullMark: 150,
+  },
+  {
+    subject: 'Physics',
+    A: 85,
+    B: 90,
+    fullMark: 150,
+  },
+  {
+    subject: 'History',
+    A: 65,
+    B: 85,
+    fullMark: 150,
+  },
+];
+///////////////////

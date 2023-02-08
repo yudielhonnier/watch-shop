@@ -19,7 +19,7 @@ const poppinsBold = localFont({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className={`${poppinsBold.variable} font-poppins text-white`}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </div>
   );
 }

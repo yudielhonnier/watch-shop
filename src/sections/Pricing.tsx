@@ -5,7 +5,7 @@ import React from 'react';
 import PricingCard from '@/components/PricingCard';
 import PricingTitle from '@/components/PricingTitle';
 
-import { pricing } from '@/constant/clock';
+import { pricing } from '@/constant';
 import { IPaddingRight } from '@/constant/types';
 
 import { zoomIn } from '../utils/motion';
@@ -13,7 +13,9 @@ import { zoomIn } from '../utils/motion';
 const Pricing = ({ pr }: IPaddingRight) => {
   return (
     <div
-      className={` h-[100vh] bg-gradient-pricing pl-24 ${pr && 'pr-24'} pt-16`}
+      className={` h-[100vh] bg-gradient-pricing pl-24 ${
+        pr && 'pr-24'
+      } flex flex-col pt-16`}
       id='pricing'
     >
       <motion.div

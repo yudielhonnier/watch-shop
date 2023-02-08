@@ -7,13 +7,15 @@ import PageTitle from '@/components/PageTitle';
 
 import { IPaddingRight } from '@/constant/types';
 
-import { watchContact } from '../constant/clock';
+import { watchContact } from '../constant';
 import { clockVariants } from '../utils/motion';
 
 const Contact = ({ pr }: IPaddingRight) => {
   return (
     <div
-      className={` pl-24 ${pr && 'pr-24'} h-[100vh]  bg-gradient-contact pt-16`}
+      className={` pl-24 ${
+        pr && 'pr-24'
+      } flex h-[100vh]  flex-col bg-gradient-contact pt-16`}
       id='contact'
     >
       <motion.div

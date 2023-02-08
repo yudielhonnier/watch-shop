@@ -5,18 +5,20 @@ import HomeTitle from '@/components/HomeTitle';
 import Navbar from '@/components/Navbar';
 
 import { IPaddingRight } from '@/constant/types';
+import { styles } from '@/styles/styles';
 
 const Section1 = ({ pr }: IPaddingRight) => {
   return (
     <div
-      className='min-h-[100vh] flex-1 flex-row bg-gradient-section1'
+      // dont put pl-24 here because i need that navbar ocupe all width screen'
+      className='min-h-[100vh] flex-1 flex-col bg-gradient-section1 '
       id='home'
     >
       <Navbar />
       <div
         className={`
-      ${pr && 'pr-24'}
-       flex flex-wrap justify-between pt-16    `}
+      ${pr && styles.rPaddings}
+        flex justify-between  pt-16 xs:flex-col lg:flex-row`}
       >
         <HomeTitle />
         <Carrousel showTypes={false} />

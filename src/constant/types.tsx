@@ -44,3 +44,8 @@ export interface IclockType {
 export interface ICarrousel {
   showTypes: boolean;
 }
+
+export interface ChartsHeaderProps {
+  category: string;
+  title: string;
+}

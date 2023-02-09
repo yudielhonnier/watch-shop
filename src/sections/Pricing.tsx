@@ -13,7 +13,7 @@ import { zoomIn } from '../utils/motion';
 const Pricing = ({ pr }: IPaddingRight) => {
   return (
     <div
-      className={` h-[100vh] bg-gradient-pricing pl-24 ${
+      className={` bg-gradient-pricing pl-24 xs:h-full  ${
         pr && 'pr-24'
       } flex flex-col pt-16`}
       id='pricing'
@@ -25,7 +25,7 @@ const Pricing = ({ pr }: IPaddingRight) => {
       >
         <PricingTitle />
       </motion.div>
-      <div className='flex flex-row items-center justify-center gap-20 pt-20 '>
+      <div className='flex  items-center justify-center gap-20 pt-20 pb-8 xs:flex-col lg:flex-row '>
         {pricing.map((v) => (
           <motion.div
             key={v.id}

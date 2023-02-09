@@ -1,21 +1,20 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import React from 'react';
 
 import ButtonContact from '@/components/ButtonContact';
+import ContactClock from '@/components/ContactClock';
+import ContactJoined from '@/components/ContactJoined';
 import PageTitle from '@/components/PageTitle';
 
 import { IPaddingRight } from '@/constant/types';
-
-import { watchContact } from '../constant';
-import { clockVariants } from '../utils/motion';
+import { styles } from '@/styles/styles';
 
 const Contact = ({ pr }: IPaddingRight) => {
   return (
     <div
       className={` pl-24 ${
-        pr && 'pr-24'
-      } flex h-[100vh]  flex-col bg-gradient-contact pt-16`}
+        pr && styles.paddings
+      } flex flex-col bg-gradient-contact  pt-16 xs:h-full lg:h-[100vh]`}
       id='contact'
     >
       <motion.div
@@ -25,49 +24,18 @@ const Contact = ({ pr }: IPaddingRight) => {
       >
         <PageTitle title='Contact' subtitle='' />
       </motion.div>
-      <div className=' relative flex flex-col items-center gap-6 pt-8 '>
-        {/* todo:add media querys */}
-        <motion.div
-          variants={clockVariants('left')}
-          initial='hidden'
-          whileInView='show'
-          className='absolute right-40 top-5 h-[260px] w-[250px]'
-        >
-          <Image
-            fill
-            sizes='(max-width: 768px) 100vw,
-                      (max-width: 1200px) 50vw,
-                       33vw'
-            priority={true}
-            src={watchContact.imgurl}
-            alt={watchContact.name}
-            className='z-[999]  rounded-lg object-contain '
-          />
-        </motion.div>
-        <div className='flex w-[80%] flex-col  '>
-          <div
-            // todo:remove bg-yellow when the img bg is posted
-            className={`flex flex-col  `}
-          >
-            <div className='bg-primary  text-bold text-primary justify-center rounded-t-lg text-2xl'>
-              <div className=' text-primary h-[8px] w-[100%] rounded-t-lg bg-custom-yellow ' />
-            </div>
-            <div className=' break-words   rounded-b-lg  bg-box-primary/80 p-8 '>
-              <p className={` py-2 text-3xl font-extrabold text-custom-yellow`}>
-                Have you joined our family yet?
-              </p>
-              <div className='w-[60%]'>
-                <p className='py-8'>
-                  Hi there friend, our Watchesshop community is growing at a
-                  fast pace please give us some love on our social networks
-                </p>
-              </div>
-            </div>
+      <div className=' relative flex flex-col items-center gap-6 py-8 '>
+        <div className='flex w-[100%] flex-col  '>
+          <div className='flex h-[100%] w-[100%] flex-col  '>
+            <ContactJoined />
           </div>
-          <div className='flex flex-row items-center justify-start gap-6 pt-8 '>
+          <div className='relative flex flex-row  items-center justify-start gap-6 pt-8 lg:static '>
             <ButtonContact src='/svg/facebook.svg' text='Hello' />
             <ButtonContact src='/svg/instagram.svg' text='Hello' />
             <ButtonContact src='/svg/twitter.svg' text='Hello' />
+            {/* todo:set this component here  because when the info text is stretched, the size
+        properties are modified */}
+            <ContactClock />
           </div>
         </div>
       </div>

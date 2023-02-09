@@ -11,7 +11,7 @@ const Section1 = ({ pr }: IPaddingRight) => {
   return (
     <div
       // dont put pl-24 here because i need that navbar ocupe all width screen'
-      className='min-h-[100vh] flex-1 flex-col bg-gradient-section1 '
+      className='flex-col bg-gradient-section1 xs:h-full '
       id='home'
     >
       <Navbar />

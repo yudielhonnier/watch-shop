@@ -12,7 +12,8 @@ module.exports = {
         poppins: ['var(--poppins-font)', ...fontFamily.sans],
       },
       screens: {
-        xs: '475px',
+        xs: '320px',
+        sm: '481px',
         ...defaultTheme.screens,
       },
       colors: {

@@ -15,7 +15,7 @@ const Features = ({ pr }: IPaddingRight) => {
     <div
       className={`flex flex-col  ${
         pr && 'pr-24'
-      } h-full bg-gradient-features lg:h-[100vh]  ${styles.lPaddings} pt-16`}
+      } h-full bg-gradient-features   ${styles.lPaddings} pt-16`}
       id='features'
     >
       <motion.div

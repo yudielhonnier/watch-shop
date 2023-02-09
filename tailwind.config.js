@@ -29,7 +29,7 @@ module.exports = {
           800: 'rgb(var(--tw-color-primary-800) / <alpha-value>)',
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
-        black: '#0d0c0f',
+        'custom-black': '#0d0c0f',
         'custom-yellow': '#e2ce32',
         'yellow-border': '#989561',
         white: '#e4e4e4',

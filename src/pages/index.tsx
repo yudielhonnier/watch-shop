@@ -30,9 +30,9 @@ export default function HomePage() {
       <main className='flex flex-col text-white'>
         <Section1 pr={false} />
         <Features pr={true} />
+        <Analitics pr={true} />
         <Pricing pr={true} />
         <Contact pr={true} />
-        <Analitics pr={true} />
       </main>
     </Layout>
   );

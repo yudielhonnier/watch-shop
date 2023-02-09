@@ -23,7 +23,7 @@ const HomeTitle = () => {
         <button className='bg-primary h-[40px] w-[250px] rounded-full border-2 border-yellow-border lg:w-[180px] '>
           Features
         </button>
-        <button className='h-[40px] w-[250px] rounded-full  bg-custom-yellow text-black lg:w-[180px] '>
+        <button className='h-[40px] w-[250px] rounded-full  bg-custom-yellow text-custom-black lg:w-[180px] '>
           Order Now
         </button>
       </div>

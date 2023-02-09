@@ -57,7 +57,7 @@ export const pricing = [
     category: 'Normal',
     range: '<$500',
     description: 'Special watches to wear daily',
-    color: 'bg-black/50',
+    color: 'bg-custom-black/50',
   },
   {
     id: '2',
@@ -65,7 +65,7 @@ export const pricing = [
     category: 'Advanced',
     range: '>$1000',
     description: 'Watches that will blow your mind with its originality',
-    color: 'bg-black',
+    color: 'bg-custom-black',
   },
   {
     id: '3',
@@ -73,7 +73,7 @@ export const pricing = [
     category: 'Intermediate',
     range: '$500-$1000',
     description: 'The best value for money',
-    color: 'bg-black/50',
+    color: 'bg-custom-black/50',
   },
 ];
 
@@ -131,37 +131,37 @@ export const navLinks = [
 
 export const analiticsData = [
   {
-    subject: 'Math',
+    subject: 'Dress',
     A: 120,
     B: 110,
     fullMark: 150,
   },
   {
-    subject: 'Chinese',
+    subject: 'Pilot',
     A: 98,
     B: 130,
     fullMark: 150,
   },
   {
-    subject: 'English',
+    subject: 'Field',
     A: 86,
     B: 130,
     fullMark: 150,
   },
   {
-    subject: 'Geography',
+    subject: 'Dive',
     A: 99,
     B: 100,
     fullMark: 150,
   },
   {
-    subject: 'Physics',
+    subject: 'Racing',
     A: 85,
     B: 90,
     fullMark: 150,
   },
   {
-    subject: 'History',
+    subject: 'Digital',
     A: 65,
     B: 85,
     fullMark: 150,

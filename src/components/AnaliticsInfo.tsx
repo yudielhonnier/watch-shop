@@ -3,23 +3,24 @@ import React from 'react';
 
 import { styles } from '@/styles/styles';
 
-import { zoomIn } from '../utils/motion';
+import { slideIn } from '../utils/motion';
 
 const AnaliticsInfo = () => {
   return (
     <motion.div
-      variants={zoomIn(0.1, 0.5)}
+      variants={slideIn('left', 'tween', 0.1, 0.5)}
       initial='hidden'
       whileInView='show'
-      className={`flex flex-col sm:w-[100%] lg:w-[50%] ${styles.lPaddings} `}
+      className={`flex flex-col xs:w-[100%] xs:text-center lg:w-[50%] lg:text-start  `}
     >
-      <p className={` py-2 ${styles.titles} text-custom-yellow`}>WatchSh⌚p</p>
-      <p className={` py-2 ${styles.titles}`}>The Best Watches Here</p>
-      <p className='pt-8 '>
-        Welcome to Watches , the premier destination for the
+      <p className={` py-2 ${styles.titles} `}>
+        Our <span className='text-custom-yellow'>watches</span> are sold
+        commonly on <span className='text-custom-yellow'>United State</span> and{' '}
+        <span className='text-custom-yellow'>Europe</span>
       </p>
-      <p className='pb-8 '>highest quality watches on the market.</p>
-      <div className='flex gap-12 py-8 text-2xl xs:text-xl'></div>
+      <p className={` py-2 ${styles.subtitles}`}>
+        Bellow is a graph with the types of watches delivered in this regions
+      </p>
     </motion.div>
   );
 };

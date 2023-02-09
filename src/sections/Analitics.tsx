@@ -11,8 +11,8 @@ const Analitics = ({ pr }: IPaddingRight) => {
   return (
     <div
       className={` pl-24 ${
-        pr && styles.rPaddings
-      } flex h-[100vh]  flex-col bg-gradient-contact pt-16`}
+        pr && styles.paddings
+      } flex flex-col bg-custom-black pt-16 xs:h-full lg:h-[100vh]`}
       id='analitics'
     >
       <motion.div
@@ -20,10 +20,12 @@ const Analitics = ({ pr }: IPaddingRight) => {
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5, delayChildren: 0.5 }}
         className={`
-        flex  h-full  w-full items-center justify-between pt-16 xs:flex-col lg:flex-row`}
+        flex  h-full  w-full items-center justify-between xs:flex-col lg:flex-row`}
       >
         <AnaliticsInfo />
-        <CustomRadarChart />
+        <div className='h-[100%] h-[100%] xs:w-[100%] lg:w-[50%]'>
+          <CustomRadarChart />
+        </div>
       </motion.div>
     </div>
   );

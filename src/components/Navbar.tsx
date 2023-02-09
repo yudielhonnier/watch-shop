@@ -44,7 +44,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? 'hidden' : 'flex'
-          } bg-black-gradient sidebar absolute top-20 left-0 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
+          } bg-custom-black-gradient sidebar absolute top-20 left-0 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
         >
           <ul className='flex flex-1 list-none flex-col items-start justify-end'>
             {navLinks.map((nav, index) => (
@@ -64,7 +64,7 @@ const Navbar = () => {
 
       {/* explore button*/}
       <div className='flex h-[40%] w-[20%] items-end justify-center sm:w-[12%]  '>
-        <button className='text-extrabold   h-full w-full rounded-full bg-custom-yellow text-2xl text-black sm:text-xl '>
+        <button className='text-extrabold   h-full w-full rounded-full bg-custom-yellow text-2xl text-custom-black sm:text-xl '>
           Explore
         </button>
       </div>

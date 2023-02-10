@@ -14,7 +14,7 @@ const ContactClock = () => {
       variants={clockVariants('left')}
       initial='hidden'
       whileInView='show'
-      className=' absolute  xs:-top-5 xs:-right-3 xs:h-[200%] xs:w-[20%]  lg:top-3 lg:right-20 lg:h-[75%] lg:w-[20%] '
+      className=' absolute  2xs:-top-3 2xs:right-0 2xs:h-[80%] 2xs:w-[20%] sm:w-[10%]  lg:top-3 lg:right-20 lg:h-[78%] lg:w-[20%] '
     >
       <Image
         fill

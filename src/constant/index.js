@@ -168,3 +168,18 @@ export const analiticsData = [
   },
 ];
 ///////////////////
+
+export const socialNetwork = [
+  {
+    src: '/svg/facebook.svg',
+    text: 'Facebook',
+  },
+  {
+    src: '/svg/instagram.svg',
+    text: 'Instagram',
+  },
+  {
+    src: '/svg/twitter.svg',
+    text: 'Twitter',
+  },
+];

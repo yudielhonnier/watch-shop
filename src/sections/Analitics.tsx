@@ -12,7 +12,7 @@ const Analitics = ({ pr }: IPaddingRight) => {
     <div
       className={` pl-24 ${
         pr && styles.paddings
-      } flex flex-col bg-custom-black pt-16 xs:h-full lg:h-[100vh]`}
+      } flex flex-col bg-custom-black pt-16 2xs:h-full lg:h-[100vh]`}
       id='analitics'
     >
       <motion.div
@@ -20,10 +20,10 @@ const Analitics = ({ pr }: IPaddingRight) => {
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5, delayChildren: 0.5 }}
         className={`
-        flex  h-full  w-full items-center justify-between xs:flex-col lg:flex-row`}
+        flex  h-full  w-full items-center justify-between 2xs:flex-col lg:flex-row`}
       >
         <AnaliticsInfo />
-        <div className='h-[100%] h-[100%] xs:w-[100%] lg:w-[50%]'>
+        <div className='h-[100%] h-[100%] 2xs:w-[100%] lg:w-[50%]'>
           <CustomRadarChart />
         </div>
       </motion.div>

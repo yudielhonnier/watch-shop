@@ -12,8 +12,7 @@ module.exports = {
         poppins: ['var(--poppins-font)', ...fontFamily.sans],
       },
       screens: {
-        xs: '320px',
-        sm: '481px',
+        '2xs': '320px',
         ...defaultTheme.screens,
       },
       colors: {
@@ -66,8 +65,8 @@ module.exports = {
         '88vh': '88vh',
       },
       backgroundImage: {
-        'gradient-section1':
-          "radial-gradient(circle at 88% 8%, rgba(226, 206, 50, 0.2) 0%, rgba(23, 23, 23, 1) 11%, rgba(13, 12, 15, 0) 100%),radial-gradient(circle at 0% 47%, rgba(226, 206, 50, 0.5) 0%, rgba(23, 23, 23, 0.8) 15%, rgba(13, 12, 15, 1) 100%),url('/images/section1-bg.jpg')",
+        'gradient-hero':
+          "radial-gradient(circle at 88% 8%, rgba(226, 206, 50, 0.2) 0%, rgba(23, 23, 23, 1) 11%, rgba(13, 12, 15, 0) 100%),radial-gradient(circle at 0% 47%, rgba(226, 206, 50, 0.5) 0%, rgba(23, 23, 23, 0.8) 15%, rgba(13, 12, 15, 1) 100%),url('/images/hero-bg.jpg')",
         'gradient-features':
           "radial-gradient(circle at 100% 100%, rgba(226, 206, 50, 0.5) 0%, rgba(23, 23, 23, 0.8) 15%, rgba(13, 12, 15, 1) 100%),url('/images/features4-bg.jpg')",
         'gradient-pricing':

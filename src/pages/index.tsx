@@ -17,8 +17,8 @@ import Seo from '@/components/Seo';
 import Analitics from '@/sections/Analitics';
 import Contact from '@/sections/Contact';
 import Features from '@/sections/Features';
+import Hero from '@/sections/Hero';
 import Pricing from '@/sections/Pricing';
-import Section1 from '@/sections/Section1';
 
 //todo: add dinamic env like JK
 export default function HomePage() {
@@ -28,7 +28,7 @@ export default function HomePage() {
       <Seo />
 
       <main className='flex flex-col text-white'>
-        <Section1 pr={false} />
+        <Hero pr={false} />
         <Features pr={true} />
         <Analitics pr={true} />
         <Pricing pr={true} />

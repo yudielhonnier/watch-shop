@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactInvitation = () => {
   return (
-    <div className={`flex  h-[100%] w-[100%] flex-col `}>
+    <div className={`flex  h-[100%] w-[100%] flex-col pb-8 `}>
       <div className='bg-primary  text-bold text-primary justify-center rounded-t-lg text-2xl'>
         <div className=' text-primary h-[8px] w-[100%] rounded-t-lg bg-custom-yellow ' />
       </div>
@@ -14,9 +14,27 @@ const ContactInvitation = () => {
         </p>
         <div className='md:w-[75%] lg:w-[80%]'>
           <p className='py-8'>
-            Hi there friend, our Watchesshop community is growing at a fast pace
-            please give us some love on our social networks
+            Our Watchesshop community is growing at a fast pace please give us
+            some love on our social networks and look this sales.
           </p>
+
+          <p>
+            SignUp now & get <span>10%</span> Off{' '}
+          </p>
+          <div className='flex w-[80%] flex-row'>
+            <form action=''>
+              <input
+                type='text'
+                placeholder='Email'
+                className='w-[70%]'
+              ></input>
+              <input
+                type='submit'
+                value='SignUp'
+                className='bg-green w-[30%]'
+              ></input>
+            </form>
+          </div>
         </div>
       </div>
     </div>

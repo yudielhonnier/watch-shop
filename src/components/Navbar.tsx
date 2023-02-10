@@ -24,7 +24,7 @@ const Navbar = () => {
       className={`flex h-[12vh] w-full  items-center  justify-between  bg-box-primary/70  ${styles.xPaddings}`}
     >
       {/* link list */}
-      <div className='text-extrabold hidden items-center justify-between text-lg xs:w-[70%]   sm:flex sm:gap-2 lg:w-[50%]'>
+      <div className='text-extrabold hidden items-center justify-between text-lg 2xs:w-[70%]   sm:flex sm:gap-2 lg:w-[50%]'>
         {navLinks.map((nav) => (
           <div key={nav.id} className='truncate'>
             <Link href={`#${nav.id}`}>{nav.title}</Link>
@@ -64,7 +64,7 @@ const Navbar = () => {
 
       {/* explore button*/}
       <div className='flex h-[40%] items-center justify-center lg:w-[15%]   '>
-        <button className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 xs:text-xl  '>
+        <button className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '>
           Explore
         </button>
       </div>

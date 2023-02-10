@@ -5,7 +5,7 @@ import { IButtonContact } from '@/constant/types';
 
 const ButtonContact = ({ src }: IButtonContact) => {
   return (
-    <div className='flex flex-row items-center justify-start rounded-full bg-custom-yellow/30 px-4 xs:h-full '>
+    <div className='flex flex-row items-center justify-start rounded-full bg-custom-yellow/30 px-4 2xs:h-[80%]  '>
       <Image
         src={src}
         width={32}

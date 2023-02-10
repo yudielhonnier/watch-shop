@@ -14,8 +14,8 @@ const Features = ({ pr }: IPaddingRight) => {
   return (
     <div
       className={`flex flex-col  ${
-        pr && 'pr-24'
-      } h-full bg-gradient-features   ${styles.lPaddings} pt-16`}
+        pr && styles.xPaddings
+      } bg-gradient-features pt-16 2xs:h-full  lg:h-[100vh]`}
       id='features'
     >
       <motion.div
@@ -29,11 +29,11 @@ const Features = ({ pr }: IPaddingRight) => {
           subtitle='Analyze and draw your own conclusions'
         />
       </motion.div>
-      <div className='flex flex-row items-center gap-16 p-4 xs:justify-center lg:justify-between'>
+      <div className='flex flex-row items-center gap-16 p-4 2xs:justify-center lg:justify-between'>
         {/* todo:bug customAll color inside tailwind config dont work,if i change the with either */}
         {/* this div have a bug, to show it i need create this same div with the same properties in another component */}
-        <div className=' text-primary h-[5px] w-[50px] rounded-lg bg-custom-yellow xs:hidden lg:flex' />
-        <div className='flex   items-center justify-center gap-20 xs:flex-col lg:flex-row'>
+        <div className=' text-primary h-[5px] w-[50px] rounded-lg bg-custom-yellow 2xs:hidden lg:flex' />
+        <div className='flex   items-center justify-center gap-20 2xs:flex-col lg:flex-row'>
           {features.length > 0 &&
             features.map((f, i) => (
               <motion.div
@@ -52,7 +52,7 @@ const Features = ({ pr }: IPaddingRight) => {
               </motion.div>
             ))}
         </div>
-        <div className=' text-primary h-[5px] w-[50px] rounded-lg bg-custom-yellow xs:hidden lg:flex' />
+        <div className=' text-primary h-[5px] w-[50px] rounded-lg bg-custom-yellow 2xs:hidden lg:flex' />
       </div>
     </div>
   );

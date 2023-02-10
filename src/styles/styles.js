@@ -1,18 +1,18 @@
 export const styles = {
-  titles: 'font-extrabold text-5xl',
+  titles: 'font-extrabold xs:text-5xl 2xs:text-4xl ',
   subtitles: 'font-extrabold text-3xl',
 
   innerWidth: '2xl:max-w-[1280px] w-full',
   interWidth: 'lg:w-[80%] w-[100%]',
 
-  paddings: 'sm:p-16 xs:p-8 px-6 py-12',
-  yPaddings: 'sm:py-16 xs:py-8 py-12',
-  xPaddings: 'xs:px-4 sm:px-8 md:px-16 lg:px-24',
-  lPaddings: 'xs:pl-4 sm:pl-8 md:pl-16 lg:pl-24',
-  rPaddings: 'xs:pr-4 sm:pr-8 md:pr-16 lg:pr-24',
+  paddings: 'sm:p-16 2xs:p-8 px-6 py-12',
+  yPaddings: 'sm:py-16 2xs:py-8 py-12',
+  xPaddings: '2xs:px-4 sm:px-8 md:px-16 lg:px-24',
+  lPaddings: '2xs:pl-4 sm:pl-8 md:pl-16 lg:pl-24',
+  rPaddings: '2xs:pr-4 sm:pr-8 md:pr-16 lg:pr-24',
 
-  topPaddings: 'sm:pt-16 xs:pt-8 pt-12',
-  bottomPaddings: 'sm:pb-16 xs:pb-8 pb-12',
+  topPaddings: 'sm:pt-16 2xs:pt-8 pt-12',
+  bottomPaddings: 'sm:pb-16 2xs:pb-8 pb-12',
 
   flexCenter: 'flex justify-center items-center',
   flexStart: 'flex justify-start items-start',

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ContactJoined = () => {
+const ContactInvitation = () => {
   return (
-    <div className={`flex flex-col  `}>
+    <div className={`flex  h-[100%] w-[100%] flex-col `}>
       <div className='bg-primary  text-bold text-primary justify-center rounded-t-lg text-2xl'>
         <div className=' text-primary h-[8px] w-[100%] rounded-t-lg bg-custom-yellow ' />
       </div>
@@ -23,4 +23,4 @@ const ContactJoined = () => {
   );
 };
 
-export default ContactJoined;
+export default ContactInvitation;

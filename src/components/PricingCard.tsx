@@ -31,7 +31,7 @@ const PricingCard = ({
           </p>
           <p className={` px-4 text-2xl font-extrabold `}>{description}</p>
           <button
-            className={`absolute -bottom-5 left-0 right-0  mr-auto ml-auto h-[40px] w-[250px] rounded-full  border-2 border-yellow-border bg-custom-yellow font-bold text-dark lg:w-[180px]  `}
+            className={`absolute -bottom-5 left-0 right-0  mr-auto ml-auto h-[40px] w-[250px] rounded-full  border-2 border-yellow-border bg-custom-yellow font-bold text-custom-black lg:w-[180px]  `}
           >
             See
           </button>

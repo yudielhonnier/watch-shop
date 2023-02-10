@@ -3,7 +3,7 @@ import React from 'react';
 
 import ButtonContact from '@/components/ButtonContact';
 import ContactClock from '@/components/ContactClock';
-import ContactJoined from '@/components/ContactJoined';
+import ContactInvitation from '@/components/ContactInvitation';
 import PageTitle from '@/components/PageTitle';
 
 import { IPaddingRight } from '@/constant/types';
@@ -25,10 +25,8 @@ const Contact = ({ pr }: IPaddingRight) => {
         <PageTitle title='Contact' subtitle='' />
       </motion.div>
       <div className=' relative flex flex-col items-center gap-6 py-8 '>
-        <div className='flex w-[100%] flex-col  '>
-          <div className='flex h-[100%] w-[100%] flex-col  '>
-            <ContactJoined />
-          </div>
+        <div className='flex w-[80%] flex-col  '>
+          <ContactInvitation />
           <div className='relative flex flex-row  items-center justify-start gap-6 pt-8 lg:static '>
             <ButtonContact src='/svg/facebook.svg' text='Hello' />
             <ButtonContact src='/svg/instagram.svg' text='Hello' />

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Close } from 'public/svg';
+import { Close, Menu } from 'public/svg';
 import React, { useState } from 'react';
 
 import { navLinks } from '@/constant';
@@ -24,11 +24,11 @@ const Navbar = () => {
       className={`flex h-[12vh] w-full  items-center  justify-between  bg-box-primary/70  ${styles.xPaddings}`}
     >
       {/* link list */}
-      <div className='text-extrabold hidden w-[50%] items-center justify-between   text-xl sm:flex sm:gap-2'>
+      <div className='text-extrabold hidden items-center justify-between text-lg xs:w-[70%]   sm:flex sm:gap-2 lg:w-[50%]'>
         {navLinks.map((nav) => (
-          <Link key={nav.id} href={`#${nav.id}`}>
-            {nav.title}
-          </Link>
+          <div key={nav.id} className='truncate'>
+            <Link href={`#${nav.id}`}>{nav.title}</Link>
+          </div>
         ))}
       </div>
 
@@ -36,15 +36,15 @@ const Navbar = () => {
       <div className='flex  items-center  justify-between sm:hidden'>
         <div
           onClick={() => setToggle((toggle) => !toggle)}
-          className='h-[28px] w-[28px] object-contain'
+          className='flex h-[28px] w-[28px] items-center justify-center object-contain'
         >
-          <Close />
+          {toggle ? <Close /> : <Menu />}
         </div>
         {/* side menu */}
         <div
           className={`${
             !toggle ? 'hidden' : 'flex'
-          } bg-custom-black-gradient sidebar absolute top-20 left-0 mx-4 my-2 min-w-[140px] rounded-xl p-6`}
+          } sidebar absolute top-20 left-0 mx-4 my-2 min-w-[140px] rounded-xl bg-custom-black p-6`}
         >
           <ul className='flex flex-1 list-none flex-col items-start justify-end'>
             {navLinks.map((nav, index) => (
@@ -63,8 +63,8 @@ const Navbar = () => {
       </div>
 
       {/* explore button*/}
-      <div className='flex h-[40%] w-[20%] items-end justify-center sm:w-[12%]  '>
-        <button className='text-extrabold   h-full w-full rounded-full bg-custom-yellow text-2xl text-custom-black sm:text-xl '>
+      <div className='flex h-[40%] items-center justify-center lg:w-[15%]   '>
+        <button className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 xs:text-xl  '>
           Explore
         </button>
       </div>

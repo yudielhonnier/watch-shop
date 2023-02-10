@@ -11,9 +11,9 @@ const Feature = ({ name, description, width2, height2, haveTitle }: ICard) => {
       <div className='bg-yellow text-bold flex flex-row justify-center rounded-t-lg bg-custom-yellow text-2xl text-custom-black '>
         {haveTitle && <p>Feature</p>}
       </div>
-      <div className=' flex-1 break-words rounded-b-lg bg-custom-black/80 px-5'>
+      <div className=' flex h-[100%] flex-col break-words rounded-b-lg bg-custom-black/80 px-5'>
         <p className='py-7 text-custom-yellow '>{name}</p>
-        <p className=''>{description}</p>
+        <p className='pb-16'>{description}</p>
       </div>
     </div>
   );

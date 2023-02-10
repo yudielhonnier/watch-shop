@@ -29,11 +29,9 @@ const Features = ({ pr }: IPaddingRight) => {
           subtitle='Analyze and draw your own conclusions'
         />
       </motion.div>
-      <div className='flex flex-row items-center gap-16 p-4 2xs:justify-center lg:justify-between'>
-        {/* todo:bug customAll color inside tailwind config dont work,if i change the with either */}
-        {/* this div have a bug, to show it i need create this same div with the same properties in another component */}
+      <div className='flex flex-row items-center gap-14 p-4 2xs:justify-center lg:h-[50%] lg:h-[70%]  lg:justify-between'>
         <div className=' text-primary h-[5px] w-[50px] rounded-lg bg-custom-yellow 2xs:hidden lg:flex' />
-        <div className='flex   items-center justify-center gap-20 2xs:flex-col lg:flex-row'>
+        <div className='flex  h-[100%] w-[100%] items-center justify-center gap-14 2xs:flex-col  lg:flex-row'>
           {features.length > 0 &&
             features.map((f, i) => (
               <motion.div
@@ -41,6 +39,7 @@ const Features = ({ pr }: IPaddingRight) => {
                 initial='hidden'
                 whileInView='show'
                 key={f.name}
+                className='flex h-[100%] flex-row items-center justify-center sm:w-[40%] lg:w-[30%]'
               >
                 <Feature
                   width2={f.width2}

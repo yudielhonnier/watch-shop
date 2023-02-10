@@ -30,6 +30,7 @@ export interface IPlans {
   description: string;
   isAdvanced: boolean;
   color: string;
+  size: string;
 }
 
 export interface IIcon {

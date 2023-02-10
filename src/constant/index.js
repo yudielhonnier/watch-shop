@@ -58,6 +58,7 @@ export const pricing = [
     range: '<$500',
     description: 'Special watches to wear daily',
     color: 'bg-custom-black/50',
+    size: 'w-[90%] min-w-[250px] max-w-[300px] h-[80%]',
   },
   {
     id: '2',
@@ -66,6 +67,8 @@ export const pricing = [
     range: '>$1000',
     description: 'Watches that will blow your mind with its originality',
     color: 'bg-custom-black',
+    // size: 'w-[100%] 2xs:max-w-[300px] max-w-[350px] 2xs:min-w-[300px] min-w-[350px] h-[100%]',
+    size: 'w-[95%] min-w-[300px] h-[100%] max-w-[350px]',
   },
   {
     id: '3',
@@ -74,29 +77,30 @@ export const pricing = [
     range: '$500-$1000',
     description: 'The best value for money',
     color: 'bg-custom-black/50',
+    size: 'w-[90%] max-w-[300px] min-w-[250px] h-[80%]',
   },
 ];
 
 export const features = [
   {
-    width2: 'w-[300px]',
-    height2: 'h-[350px]',
+    width2: 'w-[90%]  max-w-[300px]',
+    height2: 'h-[80%]',
     name: 'Quality',
     description:
       'Our suppliers are commetted to offering the best quality watches on the market. All of our products are created with attention to detail and made to the highest standards',
     haveTitle: true,
   },
   {
-    width2: 'w-[300px]',
-    height2: 'h-[350px]',
+    width2: 'w-[90%] max-w-[300px]',
+    height2: 'h-[80%]',
     name: 'Pricing',
     description:
       'WatchShop, we pride ourselves on offering high-quality watches at competitive prices.We understand that our customers are looking for the best value for their money, and we strive to provide that white still',
     haveTitle: true,
   },
   {
-    width2: 'w-[300px]',
-    height2: 'h-[350px]',
+    width2: 'w-[90%] max-w-[300px]',
+    height2: 'h-[80%]',
     name: 'Wide Selection',
     description:
       'Our selection includes a wide range of popular brands and styles so you can find the perfect watch to suit your taste,needs and budget.',

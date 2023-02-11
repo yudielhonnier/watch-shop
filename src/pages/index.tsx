@@ -26,7 +26,6 @@ export default function HomePage() {
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
-
       <main className='flex flex-col text-white'>
         <Hero pr={false} />
         <Features pr={true} />
@@ -34,6 +33,11 @@ export default function HomePage() {
         <Pricing pr={true} />
         <Contact pr={true} />
       </main>
+      {/* todo:end this feature */}
+      todo:&#11014 translate to a icon
+      <button className='scroll-top-btn bg-custom-yellow/60 hover:bg-custom-black'>
+        Up
+      </button>
     </Layout>
   );
 }

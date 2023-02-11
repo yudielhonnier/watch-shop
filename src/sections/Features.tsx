@@ -22,7 +22,7 @@ const Features = ({ pr }: IPaddingRight) => {
         initial='hidden'
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1.5, delayChildren: 0.5 }}
-        className='pb-8'
+        className='pb-8 2xs:text-center lg:text-start'
       >
         <PageTitle
           title='Features'

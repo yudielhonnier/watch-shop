@@ -18,23 +18,19 @@ const ContactInvitation = () => {
             some love on our social networks and look this sales.
           </p>
 
-          <p>
-            SignUp now & get <span>10%</span> Off{' '}
+          <p className='text-bold pb-4 text-xl'>
+            <span className='text-custom-yellow'>SignUp</span> now{' '}
+            <span className='text-custom-yellow'>&</span> get
+            <span className='text-custom-yellow'> 10%</span> Off{' '}
           </p>
-          <div className='flex w-[80%] flex-row'>
-            <form action=''>
-              <input
-                type='text'
-                placeholder='Email'
-                className='w-[70%]'
-              ></input>
-              <input
-                type='submit'
-                value='SignUp'
-                className='bg-green w-[30%]'
-              ></input>
-            </form>
-          </div>
+          <form action='' className='flex  w-[100%] flex-row gap-2'>
+            <input type='text' placeholder='Email' className='w-[70%]'></input>
+            <input
+              type='submit'
+              value='SignUp'
+              className='bg-green w-[30%] bg-custom-yellow text-custom-black'
+            ></input>
+          </form>
         </div>
       </div>
     </div>

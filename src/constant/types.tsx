@@ -1,3 +1,4 @@
+import { LegacyRef } from 'react';
 export interface IBrands {
   _id: string;
   imgUrl: string;
@@ -18,6 +19,10 @@ export interface ICard {
 
 export interface IPaddingRight {
   pr: boolean;
+}
+export interface IHeroProps {
+  pr: boolean;
+  heroRef: LegacyRef<HTMLDivElement>;
 }
 
 export interface IButtonContact {

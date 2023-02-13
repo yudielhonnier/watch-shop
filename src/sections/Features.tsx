@@ -5,18 +5,19 @@ import Feature from '@/components/Feature';
 import PageTitle from '@/components/PageTitle';
 
 import { features } from '@/constant';
-import { IPaddingRight } from '@/constant/types';
+import { IFeaturesProps } from '@/constant/types';
 import { styles } from '@/styles/styles';
 
 import { fadeIn } from '../utils/motion';
 
-const Features = ({ pr }: IPaddingRight) => {
+const Features = ({ pr, featuresRef }: IFeaturesProps) => {
   return (
     <div
       className={`flex flex-col  ${
         pr && styles.xPaddings
       } bg-gradient-features pt-16 2xs:h-full  lg:h-[100vh]`}
       id='features'
+      ref={featuresRef}
     >
       <motion.div
         initial='hidden'

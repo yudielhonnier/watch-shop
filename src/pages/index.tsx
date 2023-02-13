@@ -11,6 +11,9 @@
 
 import * as React from 'react';
 
+import useScrollPosition from '@/hooks/useScrollPosition';
+
+import FloatingButton from '@/components/FloatingButton';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
@@ -23,14 +26,16 @@ import Pricing from '@/sections/Pricing';
 import { ArrowUp1, SignUp } from '~/svg';
 
 //todo: add dinamic env like JK
-{
-  /* todo:fix the buttonUp feature */
-}
 export default function HomePage() {
   const heroRef = React.useRef<HTMLDivElement>(null);
+  const featuresRef = React.useRef<HTMLDivElement>(null);
+  const analiticsRef = React.useRef<HTMLDivElement>(null);
+  const pricingRef = React.useRef<HTMLDivElement>(null);
+  const contactRef = React.useRef<HTMLDivElement>(null);
 
-  const handleScroll = (ref: React.LegacyRef<HTMLDivElement>) => {
-    // to cast the ref value
+  const scrollYPosition = useScrollPosition();
+
+  const handleScroll = (ref: HTMLDivElement | null) => {
     if (ref instanceof HTMLDivElement) {
       window.scrollTo({
         top: ref.offsetTop,
@@ -46,23 +51,24 @@ export default function HomePage() {
       <Seo />
       <main className='flex flex-col text-white'>
         <Hero pr={false} heroRef={heroRef} />
-        <Features pr={true} />
-        <Analitics pr={true} />
-        <Pricing pr={true} />
-        <Contact pr={true} />
+        <Features pr={true} featuresRef={featuresRef} />
+        <Analitics pr={true} analiticsRef={analiticsRef} />
+        <Pricing pr={true} pricingRef={pricingRef} />
+        <Contact pr={true} contactRef={contactRef} />
       </main>
 
-      {/* todo:&#11014 translate to a icon */}
-      <div>
-        <button
-          className='scroll-top-btn flex flex-row items-center justify-center bg-custom-yellow/60 hover:bg-custom-black'
-          onClick={() => handleScroll(heroRef)}
-        >
-          <ArrowUp1 color='white' />
-        </button>
-        <button className='download-btn flex flex-row items-center justify-center bg-custom-yellow/60 hover:bg-custom-black'>
-          <SignUp color='white' />
-        </button>
+      {/* floating buttons */}
+      <div className={`${scrollYPosition > 100 ? 'flex' : 'hidden'}`}>
+        {/* todo:add media query to this buttons */}
+        <FloatingButton
+          color='white'
+          icon={ArrowUp1}
+          handleScroll={handleScroll}
+          customRef={heroRef}
+          style='bottom-1'
+        />
+
+        <FloatingButton color='white' icon={SignUp} style='bottom-20' />
       </div>
     </Layout>
   );

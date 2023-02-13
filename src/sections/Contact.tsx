@@ -7,16 +7,17 @@ import ContactInvitation from '@/components/ContactInvitation';
 import PageTitle from '@/components/PageTitle';
 
 import { socialNetwork } from '@/constant';
-import { IPaddingRight } from '@/constant/types';
+import { IContactProps } from '@/constant/types';
 import { styles } from '@/styles/styles';
 
-const Contact = ({ pr }: IPaddingRight) => {
+const Contact = ({ pr, contactRef }: IContactProps) => {
   return (
     <div
       className={` pl-24 ${
         pr && styles.paddings
       } xs:h-full flex flex-col  bg-gradient-contact pt-16 lg:h-[100vh]`}
       id='contact'
+      ref={contactRef}
     >
       <motion.div
         initial='hidden'

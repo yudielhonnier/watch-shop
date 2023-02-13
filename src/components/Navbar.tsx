@@ -26,7 +26,7 @@ const Navbar = () => {
       {/* link list */}
       <div className='text-extrabold hidden items-center justify-between text-lg 2xs:w-[70%]   sm:flex sm:gap-2 lg:w-[50%]'>
         {navLinks.map((nav) => (
-          <div key={nav.id} className='truncate'>
+          <div key={nav.id}>
             <Link href={`#${nav.id}`}>{nav.title}</Link>
           </div>
         ))}

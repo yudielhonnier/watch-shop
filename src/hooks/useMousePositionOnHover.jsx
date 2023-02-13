@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useMousePosition = (hover) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
   useEffect(() => {
     if (hover) {
       const updateMousePosition = (ev) => {

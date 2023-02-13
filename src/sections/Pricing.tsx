@@ -6,18 +6,19 @@ import PricingCard from '@/components/PricingCard';
 import PricingTitle from '@/components/PricingTitle';
 
 import { pricing } from '@/constant';
-import { IPaddingRight } from '@/constant/types';
+import { IPricingProps } from '@/constant/types';
 import { styles } from '@/styles/styles';
 
 import { zoomIn } from '../utils/motion';
 
-const Pricing = ({ pr }: IPaddingRight) => {
+const Pricing = ({ pr, pricingRef }: IPricingProps) => {
   return (
     <div
       className={` bg-gradient-pricing pl-24 2xs:h-full lg:h-[100vh]  ${
         pr && styles.xPaddings
       } flex flex-col pt-16 `}
       id='pricing'
+      ref={pricingRef}
     >
       <motion.div
         initial='hidden'

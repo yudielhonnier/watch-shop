@@ -4,16 +4,17 @@ import React from 'react';
 import AnaliticsInfo from '@/components/AnaliticsInfo';
 import CustomRadarChart from '@/components/charts/CustomRadarChart';
 
-import { IPaddingRight } from '@/constant/types';
+import { IAnaliticsProps } from '@/constant/types';
 import { styles } from '@/styles/styles';
 
-const Analitics = ({ pr }: IPaddingRight) => {
+const Analitics = ({ pr, analiticsRef }: IAnaliticsProps) => {
   return (
     <div
       className={` pl-24 ${
         pr && styles.paddings
       } flex flex-col bg-custom-black pt-16 2xs:h-full lg:h-[100vh]`}
       id='analitics'
+      ref={analiticsRef}
     >
       <motion.div
         initial='hidden'

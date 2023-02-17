@@ -32,7 +32,6 @@ const nextConfig = {
 
     return config;
   },
-  // todo:check this property
 };
 
 module.exports = nextConfig;

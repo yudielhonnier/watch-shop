@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Close, Menu } from 'public/svg';
 import React, { useState } from 'react';
+
+import CloseIcon from '@/components/CloseIcon';
+import MenuIcon from '@/components/CloseIcon';
 
 import { navLinks } from '@/constant';
 import { styles } from '@/styles/styles';
 import { navVariants } from '@/utils/motion';
+// import Menu from '../svg/menu.svg';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -38,7 +41,7 @@ const Navbar = () => {
           onClick={() => setToggle((toggle) => !toggle)}
           className='flex h-[28px] w-[28px] items-center justify-center object-contain'
         >
-          {toggle ? <Close /> : <Menu />}
+          {toggle ? <CloseIcon /> : <MenuIcon />}
         </div>
         {/* side menu */}
         <div

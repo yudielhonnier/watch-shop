@@ -2,12 +2,11 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-import CloseIcon from '@/components/CloseIcon';
-import MenuIcon from '@/components/CloseIcon';
-
 import { navLinks } from '@/constant';
 import { styles } from '@/styles/styles';
 import { navVariants } from '@/utils/motion';
+
+import { Close, Menu } from '~/svg';
 // import Menu from '../svg/menu.svg';
 
 const Navbar = () => {
@@ -41,7 +40,8 @@ const Navbar = () => {
           onClick={() => setToggle((toggle) => !toggle)}
           className='flex h-[28px] w-[28px] items-center justify-center object-contain'
         >
-          {toggle ? <CloseIcon /> : <MenuIcon />}
+          {/* is='x3d' to suppresses test warnings about  x3dom components . */}
+          {toggle ? <Close is='x3d' /> : <Menu is='x3d' />}
         </div>
         {/* side menu */}
         <div

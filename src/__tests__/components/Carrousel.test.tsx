@@ -1,17 +1,18 @@
+import Carrousel from '@/components/Carrousel';
+
 import intersectionObserverMock from '@/__mocks__/intersectionObserverMock';
-import Pricing from '@/sections/Pricing';
 //this testUtils path is because jest think that all files inside __test__ are tests
 import { render, screen } from '@/utils/testUtils';
 
-describe('Pricing', () => {
+describe.only('Carrousel', () => {
   //to solve console.warns  IntersectionObserver not available on this device.
   beforeEach(intersectionObserverMock);
 
-  it('should render Pricing component correctly', () => {
-    render(<Pricing pr={true} pricingRef={null} />);
+  it.only('should render Carrousel component correctly', () => {
+    render(<Carrousel showTypes={false} />);
 
-    const title = screen.getByText('Pricing');
+    const images = screen.getAllByRole('img');
 
-    expect(title).toBeInTheDocument();
+    expect(images[0]).toBeInTheDocument();
   });
 });

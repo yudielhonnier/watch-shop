@@ -4047,6 +4047,11 @@
   "resolved" "http://nexus.uclv.edu.cu/repository/npm/internmap/-/internmap-2.0.3.tgz"
   "version" "2.0.3"
 
+"intersection-observer@^0.12.2":
+  "integrity" "sha512-7m1vEcPCxXYI8HqnL8CKI6siDyD+eIWSwgB3DZA+ZTogxk9I4CDnj4wilt9x/+/QbHI4YG5YZNmC6458/e9Ktg=="
+  "resolved" "http://nexus.uclv.edu.cu/repository/npm/intersection-observer/-/intersection-observer-0.12.2.tgz"
+  "version" "0.12.2"
+
 "is-arrayish@^0.2.1":
   "integrity" "sha1-d8mYQFJ6qOyxqLppe4BkWnqSap0="
   "resolved" "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz"

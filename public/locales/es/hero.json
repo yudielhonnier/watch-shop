@@ -1,0 +1,20 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "features": "Características",
+    "analitics": "Análiticas",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "explore": "Explorar"
+  },
+  "title": {
+    "description": "Los Mejores Relojes Aquí",
+    "wellcome1": "Bienvenidos a Watches , el principal destino para los ",
+    "wellcome2": "relojes de la más alta calidad en el mercado.",
+    "catalogue": "Catálogo",
+    "order-now": "Ordenar ahora"
+  },
+  "carrousel": {
+    "collections": "Colecciones"
+  }
+}

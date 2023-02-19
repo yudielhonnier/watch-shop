@@ -4,6 +4,7 @@
  */
 import localFont from '@next/font/local';
 import { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
 
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
@@ -24,4 +25,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

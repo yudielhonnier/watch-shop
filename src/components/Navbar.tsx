@@ -1,17 +1,29 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import React, { useState } from 'react';
 
 import { navLinks } from '@/constant';
 import { styles } from '@/styles/styles';
 import { navVariants } from '@/utils/motion';
 
-import { Close, Menu } from '~/svg';
-// import Menu from '../svg/menu.svg';
+import { Close, Menu, World } from '~/svg';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState('');
+
+  const router = useRouter();
+  const { t } = useTranslation('hero');
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const onToggleLanguageClick = (newLocale: string) => {
+    const { pathname, asPath, query } = router;
+    router.push({ pathname, query }, asPath, { locale: newLocale });
+  };
+
+  const changeTo = router.locale === 'en' ? 'es' : 'en';
 
   const handleLinkOnClick = (nav: { id?: string; title: string }) => {
     setActive(nav.title);
@@ -29,7 +41,7 @@ const Navbar = () => {
       <div className='text-extrabold hidden items-center justify-between text-lg 2xs:w-[70%]   sm:flex sm:gap-2 lg:w-[50%]'>
         {navLinks.map((nav) => (
           <div key={nav.id}>
-            <Link href={`#${nav.id}`}>{nav.title}</Link>
+            <Link href={`#${nav.id}`}>{t(`navbar.${nav.id}`)}</Link>
           </div>
         ))}
       </div>
@@ -58,17 +70,32 @@ const Navbar = () => {
                 } ${index === navLinks.length - 1 ? 'mb-0' : 'mb-4'}`}
                 onClick={() => handleLinkOnClick(nav)}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <a href={`#${nav.id}`}>{t(`navbar.${nav.id}`)}</a>
               </li>
             ))}
           </ul>
         </div>
       </div>
+      <button
+        onClick={() => onToggleLanguageClick(changeTo)}
+        className='flex flex-row items-center justify-center '
+      >
+        <div className='w-[32px] '>
+          <World
+            width='80%'
+            height='auto'
+            className='fill-current text-custom-yellow'
+          />
+        </div>
+        <p className='text-extrabold text-lg text-white'>
+          {t(`${router.locale}`, { changeTo })}
+        </p>
+      </button>
 
       {/* explore button*/}
       <div className='flex h-[40%] items-center justify-center lg:w-[15%]   '>
         <button className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '>
-          Explore
+          {t('navbar.explore')}
         </button>
       </div>
     </motion.div>

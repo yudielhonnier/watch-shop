@@ -13,8 +13,9 @@ describe.only('Navbar', () => {
   it.only('should render Navbar component correctly', () => {
     render(<Navbar />);
 
-    const exploreButton = screen.getByRole('button');
+    const buttons = screen.getAllByRole('button');
 
-    expect(exploreButton).toBeInTheDocument();
+    //buttons[1] = navbar show explore button
+    expect(buttons[1]).toBeInTheDocument();
   });
 });

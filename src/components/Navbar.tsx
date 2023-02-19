@@ -82,6 +82,7 @@ const Navbar = () => {
       >
         <div className='w-[32px] '>
           <World
+            is='x3d'
             width='80%'
             height='auto'
             className='fill-current text-custom-yellow'

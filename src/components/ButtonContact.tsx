@@ -10,7 +10,7 @@ const ButtonContact = ({ src }: IButtonContact) => {
         src={src}
         width={32}
         height={32}
-        style={{ width: 'auto' }}
+        style={{ width: 'auto', height: 'auto' }}
         alt='facebook'
       ></Image>
     </div>

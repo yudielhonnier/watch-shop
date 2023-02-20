@@ -12,7 +12,7 @@ import { Close, Menu, World } from '~/svg';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState('home');
 
   const router = useRouter();
   const { t } = useTranslation('hero');
@@ -52,8 +52,22 @@ const Navbar = () => {
           onClick={() => setToggle((toggle) => !toggle)}
           className='flex h-[28px] w-[28px] items-center justify-center object-contain'
         >
-          {/* is='x3d' to suppresses test warnings about  x3dom components . */}
-          {toggle ? <Close is='x3d' /> : <Menu is='x3d' />}
+          {/* is='x3d' to suppresses test warnings about  The tag <close.svg> is unrecognized in this browser. */}
+          {toggle ? (
+            <Close
+              is='x3d'
+              width='80%'
+              height='100%'
+              class='fill-current text-custom-yellow'
+            />
+          ) : (
+            <Menu
+              is='x3d'
+              width='80%'
+              height='100%'
+              class='fill-current text-custom-yellow'
+            />
+          )}
         </div>
         {/* side menu */}
         <div
@@ -84,8 +98,8 @@ const Navbar = () => {
           <World
             is='x3d'
             width='80%'
-            height='auto'
-            className='fill-current text-custom-yellow'
+            height='100%'
+            class='fill-current text-custom-yellow'
           />
         </div>
         <p className='text-extrabold text-lg text-white'>

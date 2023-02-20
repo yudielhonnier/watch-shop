@@ -24,7 +24,7 @@ describe.only('AnaliticsInfo', () => {
     );
 
     //pass the key that t() function recibe in the component
-    const subtitle = screen.getByText('info.watches');
+    const subtitle = screen.getByText('info.graph-description');
 
     expect(subtitle).toBeInTheDocument();
   });

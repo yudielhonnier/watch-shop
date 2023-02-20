@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'next-i18next';
 import React from 'react';
 
 import Feature from '@/components/Feature';
@@ -11,6 +12,7 @@ import { styles } from '@/styles/styles';
 import { fadeIn } from '../utils/motion';
 
 const Features = ({ pr, featuresRef }: IFeaturesProps) => {
+  const { t } = useTranslation('features');
   return (
     <div
       className={`flex flex-col  ${
@@ -19,17 +21,10 @@ const Features = ({ pr, featuresRef }: IFeaturesProps) => {
       id='features'
       ref={featuresRef}
     >
-      <motion.div
-        initial='hidden'
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 1.5, delayChildren: 0.5 }}
-        className='pb-8 2xs:text-center lg:text-start'
-      >
-        <PageTitle
-          title='Features'
-          subtitle='Analyze and draw your own conclusions'
-        />
-      </motion.div>
+      <PageTitle
+        title={t('title')}
+        subtitle='Analyze and draw your own conclusions'
+      />
       <div className='flex flex-row items-center gap-14 p-4 2xs:justify-center lg:h-[50%] lg:h-[70%]  lg:justify-between'>
         <div className=' text-primary h-[5px] w-[50px] rounded-lg bg-custom-yellow 2xs:hidden lg:flex' />
         <div className='flex  h-[100%] w-[100%] items-center justify-center gap-14 2xs:flex-col  lg:flex-row'>

@@ -24,7 +24,7 @@ const HeroTitle = () => {
         <button className='bg-primary h-[40px] w-[250px] rounded-full border-2 border-yellow-border lg:w-[180px] '>
           {t('title.catalogue')}
         </button>
-        <button className='h-[40px] w-[250px] rounded-full  bg-custom-yellow text-custom-black/80 lg:w-[180px] '>
+        <button className='h-[40px] w-[250px] overflow-hidden  rounded-full bg-custom-yellow text-custom-black/80 2xs:pt-1.5 xs:pt-0 lg:w-[180px]'>
           {t('title.order-now')}
         </button>
       </div>

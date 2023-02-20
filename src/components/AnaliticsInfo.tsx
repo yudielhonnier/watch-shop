@@ -14,7 +14,7 @@ const AnaliticsInfo = () => {
       variants={slideIn('left', 'tween', 0.1, 0.5)}
       initial='hidden'
       whileInView='show'
-      className={`xs:w-[100%] xs:text-center flex flex-col lg:w-[50%] lg:text-start  `}
+      className={`flex flex-col xs:w-[100%] xs:text-center lg:w-[50%] lg:text-start  `}
     >
       <p className={` py-2 ${styles.titles} `}>
         {t('info.our')}{' '}

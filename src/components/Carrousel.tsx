@@ -73,7 +73,7 @@ const Carrousel = ({ showTypes }: ICarrousel) => {
 
           <div className='  h-full w-full rounded-2xl py-8 shadow transition-all delay-300'>
             <div
-              className=' xs:w-[100%] h-[375px] overflow-x-scroll whitespace-nowrap lg:min-w-[760px]'
+              className=' h-[375px] overflow-x-scroll whitespace-nowrap xs:w-[100%] lg:min-w-[760px]'
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
               onDrag={handleOnDrag}

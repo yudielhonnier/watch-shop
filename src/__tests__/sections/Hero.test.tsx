@@ -20,7 +20,7 @@ describe('Hero', () => {
         <Hero pr={true} heroRef={null} />
       </I18nextProvider>
     );
-    const title = screen.getByText('WatchSh⌚p');
+    const title = screen.getByText('title.full-name');
 
     expect(title).toBeInTheDocument();
   });

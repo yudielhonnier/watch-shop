@@ -85,6 +85,7 @@ export const features = [
   {
     width2: 'w-[90%]  max-w-[300px]',
     height2: 'h-[80%]',
+    id: 'quality',
     name: 'Quality',
     description:
       'Our suppliers are commetted to offering the best quality watches on the market. All of our products are created with attention to detail and made to the highest standards',
@@ -94,6 +95,7 @@ export const features = [
     width2: 'w-[90%] max-w-[300px]',
     height2: 'h-[80%]',
     name: 'Pricing',
+    id: 'pricing',
     description:
       'WatchShop, we pride ourselves on offering high-quality watches at competitive prices.We understand that our customers are looking for the best value for their money, and we strive to provide that white still',
     haveTitle: true,
@@ -102,6 +104,7 @@ export const features = [
     width2: 'w-[90%] max-w-[300px]',
     height2: 'h-[80%]',
     name: 'Wide Selection',
+    id: 'wide-selection',
     description:
       'Our selection includes a wide range of popular brands and styles so you can find the perfect watch to suit your taste,needs and budget.',
     haveTitle: true,

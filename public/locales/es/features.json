@@ -1,3 +1,17 @@
 {
-  "title": "Funciones"
+  "title": "Funciones",
+  "feature": {
+    "quality": {
+      "name": "Calidad",
+      "description": "Nuestros proveedores se comprometen a ofrecer relojes de la mejor calidad del mercado. Todos nuestros productos se crean con atención al detalle y se fabrican con los más altos estándares."
+    },
+    "pricing": {
+      "name": "Precios",
+      "description": "WatchShop, nos enorgullecemos de ofrecer relojes de alta calidad a precios competitivos. Comprendemos que nuestros clientes buscan el mejor valor por su dinero, y nos esforzamos por brindar ese blanco todavía."
+    },
+    "wide-selection": {
+      "name": "Amplia Selección",
+      "description": "Nuestra selección incluye una amplia gama de marcas y estilos populares para que pueda encontrar el reloj perfecto que se adapte a sus gustos, necesidades y presupuesto."
+    }
+  }
 }

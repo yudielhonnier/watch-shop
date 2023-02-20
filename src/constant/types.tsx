@@ -15,6 +15,7 @@ export interface ICard {
   haveTitle: boolean;
   width2: string;
   height2: string;
+  index: number;
 }
 
 export interface IPaddingRight {

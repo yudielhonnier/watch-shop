@@ -28,7 +28,11 @@ const ContactInvitation = () => {
             {t('invitation.off')}{' '}
           </p>
           <form action='' className='flex  w-[100%] flex-row gap-2'>
-            <input type='text' placeholder='Email' className='w-[70%]'></input>
+            <input
+              type='text'
+              placeholder={t('invitation.email') as string}
+              className='w-[70%]'
+            ></input>
             <input
               type='submit'
               value={t('invitation.sign-up') as string}

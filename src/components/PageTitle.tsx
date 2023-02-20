@@ -15,10 +15,10 @@ const PageTitle = ({ title, subtitle }: IPageTitle) => {
       transition={{ duration: 1.5, delayChildren: 0.5 }}
     >
       <div className='flex flex-col '>
-        <p className={`py-2  2xs:text-center ${styles.titles}`}>
+        <h1 className={`  2xs:text-center lg:text-start ${styles.titles}`}>
           {t(`${title}`)}
-        </p>
-        <p className='${styles.subtitles} py-8'>{subtitle}</p>
+        </h1>
+        <p className={`${styles.subtitles} py-8`}>{t(`${subtitle}`)}</p>
       </div>
     </motion.div>
   );

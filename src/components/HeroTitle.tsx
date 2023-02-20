@@ -16,7 +16,9 @@ const HeroTitle = () => {
       whileInView='show'
       className={` flex-col  2xs:pt-2 sm:w-[100%] lg:w-[50%] lg:pt-48 ${styles.xPaddings} `}
     >
-      <p className={` py-2 ${styles.titles} text-custom-yellow`}>WatchSh⌚p</p>
+      <p className={` py-2 ${styles.titles} text-custom-yellow`}>
+        {t('title.full-name')}
+      </p>
       <p className={` py-2 ${styles.titles}`}>{t('title.description')}</p>
       <p className='pt-8 '>{t('title.wellcome1')}</p>
       <p className='pb-8 '>{t('title.wellcome2')}</p>

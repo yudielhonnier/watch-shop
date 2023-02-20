@@ -12,7 +12,7 @@ const Analitics = ({ pr, analiticsRef }: IAnaliticsProps) => {
     <div
       className={` pl-24 ${
         pr && styles.paddings
-      } flex flex-col bg-custom-black pt-16 2xs:h-full lg:h-[100vh]`}
+      } flex flex-col bg-custom-black pt-16 2xs:h-full 2xs:items-start lg:h-[100vh] `}
       id='analitics'
       ref={analiticsRef}
     >

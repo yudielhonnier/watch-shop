@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'next-i18next';
 import React from 'react';
 
 import { ICard } from '@/constant/types';
@@ -13,6 +14,8 @@ const Feature = ({
   haveTitle,
   index,
 }: ICard) => {
+  const { t } = useTranslation('features');
+
   return (
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
@@ -25,7 +28,7 @@ const Feature = ({
         className={`flex flex-col ${width2} ${height2} `}
       >
         <div className='bg-yellow text-bold flex flex-row justify-center rounded-t-lg bg-custom-yellow text-2xl text-custom-black '>
-          {haveTitle && <p>Feature</p>}
+          {haveTitle && <p>{t('headline')}</p>}
         </div>
         <div className=' flex h-[100%] flex-col break-words rounded-b-lg bg-custom-black/80 px-5'>
           <p className='py-7 text-custom-yellow '>{name}</p>

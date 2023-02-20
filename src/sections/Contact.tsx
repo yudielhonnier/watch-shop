@@ -16,7 +16,7 @@ const Contact = ({ pr, contactRef }: IContactProps) => {
     <div
       className={` pl-24 ${
         pr && styles.paddings
-      } flex flex-col bg-gradient-contact  pt-16 xs:h-full lg:h-[100vh]`}
+      } flex flex-col bg-gradient-contact  pt-16 2xs:items-center xs:h-full lg:h-[100vh] lg:items-start`}
       id='contact'
       ref={contactRef}
     >

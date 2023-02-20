@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,7 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...fontFamily.sans],
+        primary: [...fontFamily.sans],
+        poppins: ['var(--poppins-font)', ...fontFamily.sans],
+      },
+      screens: {
+        '2xs': '320px',
+        xs: '450px',
+        ...defaultTheme.screens,
       },
       colors: {
         primary: {
@@ -23,6 +30,11 @@ module.exports = {
           800: 'rgb(var(--tw-color-primary-800) / <alpha-value>)',
           900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
         },
+        'custom-black': '#0d0c0f',
+        'custom-yellow': '#e2ce32',
+        'yellow-border': '#989561',
+        white: '#e4e4e4',
+        'box-primary': '#171717',
         dark: '#222222',
       },
       keyframes: {
@@ -49,6 +61,21 @@ module.exports = {
       animation: {
         flicker: 'flicker 3s linear infinite',
         shimmer: 'shimmer 1.3s linear infinite',
+      },
+      height: {
+        '88vh': '88vh',
+      },
+      backgroundImage: {
+        'gradient-hero':
+          "radial-gradient(circle at 88% 8%, rgba(226, 206, 50, 0.2) 0%, rgba(23, 23, 23, 1) 11%, rgba(13, 12, 15, 0) 100%),radial-gradient(circle at 0% 47%, rgba(226, 206, 50, 0.5) 0%, rgba(23, 23, 23, 0.8) 15%, rgba(13, 12, 15, 1) 100%),url('/images/hero-bg.jpg')",
+        'gradient-features':
+          "radial-gradient(circle at 100% 100%, rgba(226, 206, 50, 0.5) 0%, rgba(23, 23, 23, 0.8) 15%, rgba(13, 12, 15, 1) 100%),url('/images/features4-bg.jpg')",
+        'gradient-pricing':
+          "radial-gradient(circle at 100% 100%, rgba(226, 206, 50, 0.5) 0%, rgba(23, 23, 23, 0.8) 15%, rgba(13, 12, 15, 1) 100%),url('/images/pricing-bg.jpg')",
+        'gradient-contact':
+          "radial-gradient(circle at 100% 100%, rgba(226, 206, 50, 0.5) 0%, rgba(23, 23, 23, 0.8) 15%, rgba(13, 12, 15, 1) 100%),url('/images/contact-bg.jpg')",
+        'gradient-navbar':
+          "lineal-gradient(circle at 100% 100%, rgba(226, 206, 50, 0.5) 0%, rgba(23, 23, 23, 0.8) 15%, rgba(13, 12, 15, 1) 100%)')",
       },
     },
   },

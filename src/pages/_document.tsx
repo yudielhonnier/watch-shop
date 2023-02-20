@@ -2,13 +2,13 @@ import { Head, Html, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang='en'>
+    <Html lang='en' className='scroll-smooth'>
       <Head>
         <link
           rel='preload'
-          href='/fonts/inter-var-latin.woff2'
+          href='/fonts/poppins-Medium.ttf'
           as='font'
-          type='font/woff2'
+          type='font/ttf'
           crossOrigin='anonymous'
         />
       </Head>

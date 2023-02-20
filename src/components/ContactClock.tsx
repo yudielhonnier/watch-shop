@@ -24,7 +24,7 @@ const ContactClock = () => {
         priority={true}
         src={watchContact.imgurl}
         alt={watchContact.name}
-        className='z-[999]  rounded-lg object-contain '
+        className='z-[999]  h-auto rounded-lg object-contain'
       />
     </motion.div>
   );

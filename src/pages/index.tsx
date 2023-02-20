@@ -9,6 +9,7 @@
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import * as React from 'react';
 
 import useScrollPosition from '@/hooks/useScrollPosition';
@@ -73,3 +74,19 @@ export default function HomePage() {
     </Layout>
   );
 }
+
+export const getStaticProps = async ({ locale }: { locale: string }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale as string, [
+        'common',
+        'hero',
+        'analitics',
+        'contact',
+        'features',
+        'pricing',
+      ])),
+      // Will be passed to the page component as props
+    },
+  };
+};

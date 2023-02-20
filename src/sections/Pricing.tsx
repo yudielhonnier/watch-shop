@@ -14,19 +14,13 @@ import { zoomIn } from '../utils/motion';
 const Pricing = ({ pr, pricingRef }: IPricingProps) => {
   return (
     <div
-      className={` bg-gradient-pricing pl-24 2xs:h-full lg:h-[100vh]  ${
+      className={` bg-gradient-pricing pl-24 2xs:h-full 2xs:items-center lg:h-[100vh]  lg:items-start ${
         pr && styles.xPaddings
       } flex flex-col pt-16 `}
       id='pricing'
       ref={pricingRef}
     >
-      <motion.div
-        initial='hidden'
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 1.5, delayChildren: 0.5 }}
-      >
-        <PricingTitle />
-      </motion.div>
+      <PricingTitle />
       <div className='flex h-[80%] w-[100%] flex-row justify-center'>
         <div className='flex h-[100%] w-[100%] items-center justify-center gap-20 pt-20 pb-8 2xs:flex-col lg:flex-row '>
           {pricing.map((v) => (

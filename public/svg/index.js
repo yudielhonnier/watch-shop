@@ -17,6 +17,7 @@ import Tie2 from './tie2.svg';
 import Tie3 from './tie3.svg';
 import Twitter from './twitter.svg';
 import Vercel from './Vercel.svg';
+import World from './world.svg';
 
 export {
   ArrowUp1,
@@ -38,4 +39,5 @@ export {
   Tie3,
   Twitter,
   Vercel,
+  World,
 };

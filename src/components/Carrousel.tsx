@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 import React, { useRef, useState } from 'react';
 
 import { ICarrousel } from '@/constant/types';
@@ -15,6 +16,8 @@ import { slideIn } from '../utils/motion';
 const Carrousel = ({ showTypes }: ICarrousel) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [typeSelected, setTypeSelected] = useState<string>('Rolex');
+
+  const { t } = useTranslation('hero');
 
   const carrouselRef = useRef<HTMLDivElement>(null);
 
@@ -45,7 +48,9 @@ const Carrousel = ({ showTypes }: ICarrousel) => {
           whileInView='show'
           className='mt-8  flex-col  items-start    '
         >
-          <div className={`px-3 py-8 ${styles.subtitles}`}>Collections</div>
+          <div className={`px-3 py-8 ${styles.subtitles}`}>
+            {t('carrousel.collections')}
+          </div>
           {showTypes && (
             <div
               className='flex gap-16 '

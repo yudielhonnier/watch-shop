@@ -13,6 +13,7 @@ module.exports = {
       },
       screens: {
         '2xs': '320px',
+        xs: '450px',
         ...defaultTheme.screens,
       },
       colors: {

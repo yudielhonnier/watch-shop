@@ -32,7 +32,7 @@ const Feature = ({
         </div>
         <div className=' flex h-[100%] flex-col break-words rounded-b-lg bg-custom-black/80 px-5'>
           <p className='py-7 text-custom-yellow '>{name}</p>
-          <p className='pb-16'>{description}</p>
+          <p className='pb-16 '>{description}</p>
         </div>
       </div>
     </motion.div>

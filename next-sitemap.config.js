@@ -3,9 +3,9 @@
  * @see https://github.com/iamvishnusankar/next-sitemap#readme
  */
 module.exports = {
-  // !STARTERCONF Change the siteUrl
-  /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  siteUrl: 'https://tsnext-tw.thcl.dev',
+  // TODO: Change the siteUrl
+  /** Without additional '/' on the end, e.g. https://watchshop.netlify.com */
+  siteUrl: 'https://watchshop.netlify.com',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],

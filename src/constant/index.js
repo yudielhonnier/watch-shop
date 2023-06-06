@@ -92,8 +92,8 @@ export const features = [
     haveTitle: true,
   },
   {
-    width2: 'w-[90%] max-w-[300px]',
-    height2: 'h-[80%]',
+    width2: 'w-[100%] max-w-[300px]',
+    height2: 'h-[100%]',
     name: 'Pricing',
     id: 'pricing',
     description:

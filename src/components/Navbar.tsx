@@ -1,8 +1,11 @@
+'use-client';
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { getProviders, signIn } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { navLinks } from '@/constant';
 import { styles } from '@/styles/styles';
@@ -13,9 +16,19 @@ import { Close, Menu, World } from '~/svg';
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState('home');
+  const [providers, setProviders] = useState(null);
 
+  //todo : use this session value
+  // const { data: session } = useSession();
   const router = useRouter();
   const { t } = useTranslation('hero');
+
+  useEffect(() => {
+    (async () => {
+      const res = await getProviders();
+      setProviders(res);
+    })();
+  }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onToggleLanguageClick = (newLocale: string) => {
@@ -109,9 +122,23 @@ const Navbar = () => {
 
       {/* explore button*/}
       <div className='flex h-[40%] items-center justify-center lg:w-[15%]   '>
-        <button className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '>
-          {t('navbar.explore')}
-        </button>
+        {providers ? (
+          Object.values(providers).map((provider) => (
+            <button
+              key={provider.name}
+              onClick={() => {
+                signIn(provider.id);
+              }}
+              className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '
+            >
+              {t('navbar.explore')}
+            </button>
+          ))
+        ) : (
+          <button className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '>
+            sign out
+          </button>
+        )}
       </div>
     </motion.div>
   );

@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { getProviders, signIn } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { navLinks } from '@/constant';
 import { styles } from '@/styles/styles';
@@ -13,22 +13,21 @@ import { navVariants } from '@/utils/motion';
 
 import { Close, Menu, World } from '~/svg';
 
-const Navbar = () => {
+const Navbar = ({ openModal }) => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState('home');
-  const [providers, setProviders] = useState(null);
-
-  //todo : use this session value
-  // const { data: session } = useSession();
+  // const [providers, setProviders] = useState(null);
+  const { data: session, status } = useSession();
+  const loading = status === 'loading';
   const router = useRouter();
   const { t } = useTranslation('hero');
 
-  useEffect(() => {
-    (async () => {
-      const res = await getProviders();
-      setProviders(res);
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     const res = await getProviders();
+  //     setProviders(res);
+  //   })();
+  // }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onToggleLanguageClick = (newLocale: string) => {
@@ -58,7 +57,6 @@ const Navbar = () => {
           </div>
         ))}
       </div>
-
       {/* hamburguer icon */}
       <div className='flex  items-center  justify-between sm:hidden'>
         <div
@@ -119,10 +117,10 @@ const Navbar = () => {
           {t(`${router.locale}`, { changeTo })}
         </p>
       </button>
-
       {/* explore button*/}
       <div className='flex h-[40%] items-center justify-center lg:w-[15%]   '>
-        {providers ? (
+        {/* todo: check how use GoogleProvider */}
+        {/* {providers ? (
           Object.values(providers).map((provider) => (
             <button
               key={provider.name}
@@ -137,6 +135,26 @@ const Navbar = () => {
         ) : (
           <button className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '>
             sign out
+          </button>
+        )} */}
+        {!session && !loading ? (
+          <button
+            onClick={() => {
+              // signIn(provider.id);.
+              return openModal();
+            }}
+            className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '
+          >
+            {t('navbar.explore')}
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              signOut();
+            }}
+            className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '
+          >
+            Logout
           </button>
         )}
       </div>

@@ -2,6 +2,7 @@ import { I18nextProvider } from 'react-i18next';
 
 import intersectionObserverMock from '@/__mocks__/intersectionObserverMock';
 import reacti18nextMock from '@/__mocks__/reacti18nextMock';
+import { MockSessionProvider } from '@/__mocks__/sessionMock';
 import Hero from '@/sections/Hero';
 import i18n from '@/utils/i18n';
 //this testUtils path is because jest think that all files inside __test__ are tests
@@ -16,9 +17,11 @@ describe('Hero', () => {
 
   it('should render Hero component correctly', () => {
     render(
-      <I18nextProvider i18n={i18n}>
-        <Hero pr={true} heroRef={null} />
-      </I18nextProvider>
+      <MockSessionProvider>
+        <I18nextProvider i18n={i18n}>
+          <Hero pr={true} heroRef={null} />
+        </I18nextProvider>
+      </MockSessionProvider>
     );
     const title = screen.getByText('title.full-name');
 

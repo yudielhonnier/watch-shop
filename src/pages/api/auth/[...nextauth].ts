@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-import { verifyPassword } from '../../../lib/auth';
+import { hashPassword, verifyPassword } from '../../../lib/auth';
 import { connectToDatabase } from '../../../lib/mongodb';
 
 interface IUser {
@@ -38,7 +38,7 @@ export default NextAuth({
 
           const isValid = await verifyPassword({
             password: credentials.password,
-            hashedPassword: user.password,
+            hashedPassword: hashPassword(user.password),
           });
 
           if (!isValid) {

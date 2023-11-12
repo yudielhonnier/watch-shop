@@ -1,9 +1,9 @@
-# Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
+# Next.js + Tailwind CSS + TypeScript ecommerce Demo
 
 <div align="center">
-  <h2>Next.js + Tailwind CSS + TypeScript ecommerce .</h2>
-  <p>This SPA is a Demo for a watch ecommerce , create with a lot of love</a></p>
-  <p>I adapted the template made by <a href="https://theodorusclarence.com">Theodorus Clarence</a></p>
+  
+ <h2>Visit Watch-shop Demo <a href="https://sweet-tulumba-f5e3c7.netlify.app/">Theodorus Clarence</a></h2>
+ <p>It was adapted the template made by Theodorus Clarence</a></p>
 
 ## Features
 

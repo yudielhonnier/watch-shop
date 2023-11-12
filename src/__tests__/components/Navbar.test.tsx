@@ -14,7 +14,7 @@ describe.only('Navbar', () => {
   //to solve console.warns  IntersectionObserver not available on this device.
   beforeEach(intersectionObserverMock);
   const mockOpenModal = () => {
-    print('opening');
+    return 'opening';
   };
 
   it.only('should render Navbar component correctly', () => {

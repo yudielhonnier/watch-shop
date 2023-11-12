@@ -52,7 +52,7 @@ export default function HomePage() {
       <Seo />
       <main className='flex flex-col text-white'>
         <Hero pr={false} heroRef={heroRef} />
-        <Features featuresRef={featuresRef} />
+        <Features pr={false} featuresRef={featuresRef} />
         <Analitics pr={true} analiticsRef={analiticsRef} />
         <Pricing pr={true} pricingRef={pricingRef} />
         <Contact pr={true} contactRef={contactRef} />

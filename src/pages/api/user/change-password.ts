@@ -45,7 +45,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-  const hashedPassword = await hashPassword(newPassword);
+  const hashedPassword = await hashPassword(newPassword, 12);
 
   // eslint-disable-next-line unused-imports/no-unused-vars
   const result = await usersCollection.updateOne(

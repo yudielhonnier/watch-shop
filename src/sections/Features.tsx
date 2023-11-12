@@ -7,11 +7,13 @@ import PageTitle from '@/components/PageTitle';
 import { features } from '@/constant';
 import { IFeaturesProps } from '@/constant/types';
 
-const Features = ({ featuresRef }: IFeaturesProps) => {
+const Features = ({ pr, featuresRef }: IFeaturesProps) => {
   const { t } = useTranslation('features');
   return (
     <div
-      className='flex flex-col  bg-gradient-features px-2 pt-16 2xs:h-full  2xs:items-center lg:h-[100vh] lg:items-start'
+      className={`flex flex-col  bg-gradient-features ${
+        pr && 'px-2'
+      } pt-16 2xs:h-full  2xs:items-center lg:h-[100vh] lg:items-start`}
       id='features'
       ref={featuresRef}
     >

@@ -4,8 +4,8 @@
 //   const hashedPassword = await hash(password, 12);
 //   return hashedPassword;
 // }
-export async function hashPassword(password: string) {
-  const hashedPassword = password + 'hash';
+export async function hashPassword(password: string, hash: number) {
+  const hashedPassword = password + 'hash' + hash;
   return hashedPassword;
 }
 
@@ -27,6 +27,6 @@ export async function verifyPassword({
   password: string;
   hashedPassword: string;
 }) {
-  const isValid = (await hashPassword(password)) == hashedPassword;
+  const isValid = password == hashedPassword;
   return isValid;
 }

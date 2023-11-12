@@ -1,6 +1,8 @@
-import { hash } from 'bcryptjs';
+// import { hash } from 'bcryptjs';
 import { MongoClient } from 'mongodb';
 import { NextApiRequest, NextApiResponse } from 'next';
+
+import { hashPassword } from '@/lib/auth';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
@@ -33,7 +35,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     //Hash password
     const status = await db.collection('users').insertOne({
       email,
-      password: await hash(password, 12),
+      password: await hashPassword(password, 12),
     });
     //Send success response
     res.status(201).json({ message: 'User created', ...status });

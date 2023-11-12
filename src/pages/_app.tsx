@@ -4,11 +4,13 @@
  */
 import localFont from '@next/font/local';
 import { AppProps } from 'next/app';
+import { SessionProvider } from 'next-auth/react';
 import { appWithTranslation } from 'next-i18next';
 
 import '@/styles/globals.css';
 // !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
 import '@/styles/colors.css';
+import '@/styles/modals.css';
 
 //this is for config your font global
 const poppinsBold = localFont({
@@ -17,11 +19,13 @@ const poppinsBold = localFont({
   variable: '--poppins-font',
 });
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
-    <div className={`${poppinsBold.variable} font-poppins text-white`}>
-      <Component {...pageProps} />
-    </div>
+    <SessionProvider session={session}>
+      <div className={`${poppinsBold.variable} font-poppins text-white`}>
+        <Component {...pageProps} />
+      </div>
+    </SessionProvider>
   );
 }
 

@@ -1,5 +1,6 @@
 export const styles = {
   titles: 'font-extrabold xs:text-5xl 2xs:text-4xl ',
+  pricing: 'font-extrabold 2xl:text-5xl 2xs:text-4xl',
   subtitles: 'font-extrabold text-3xl',
 
   innerWidth: '2xl:max-w-[1280px] w-full',

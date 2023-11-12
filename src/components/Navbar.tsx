@@ -1,6 +1,9 @@
+'use-client';
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { signOut, useSession } from 'next-auth/react';
 import { useTranslation } from 'next-i18next';
 import React, { useState } from 'react';
 
@@ -10,12 +13,21 @@ import { navVariants } from '@/utils/motion';
 
 import { Close, Menu, World } from '~/svg';
 
-const Navbar = () => {
+const Navbar = ({ openModal }: { openModal: () => void }) => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState('home');
-
+  // const [providers, setProviders] = useState(null);
+  const { data: session, status } = useSession();
+  const loading = status === 'loading';
   const router = useRouter();
   const { t } = useTranslation('hero');
+
+  // useEffect(() => {
+  //   (async () => {
+  //     const res = await getProviders();
+  //     setProviders(res);
+  //   })();
+  // }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onToggleLanguageClick = (newLocale: string) => {
@@ -45,7 +57,6 @@ const Navbar = () => {
           </div>
         ))}
       </div>
-
       {/* hamburguer icon */}
       <div className='flex  items-center  justify-between sm:hidden'>
         <div
@@ -106,12 +117,46 @@ const Navbar = () => {
           {t(`${router.locale}`, { changeTo })}
         </p>
       </button>
-
       {/* explore button*/}
       <div className='flex h-[40%] items-center justify-center lg:w-[15%]   '>
-        <button className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '>
-          {t('navbar.explore')}
-        </button>
+        {/* todo: check how use GoogleProvider */}
+        {/* {providers ? (
+          Object.values(providers).map((provider) => (
+            <button
+              key={provider.name}
+              onClick={() => {
+                signIn(provider.id);
+              }}
+              className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '
+            >
+              {t('navbar.explore')}
+            </button>
+          ))
+        ) : (
+          <button className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '>
+            sign out
+          </button>
+        )} */}
+        {!session && !loading ? (
+          <button
+            onClick={() => {
+              // signIn(provider.id);.
+              return openModal();
+            }}
+            className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '
+          >
+            {t('navbar.explore')}
+          </button>
+        ) : (
+          <button
+            onClick={() => {
+              signOut();
+            }}
+            className=' h-full  w-full rounded-full bg-custom-yellow px-2 text-2xl text-custom-black/80 2xs:text-xl  '
+          >
+            Logout
+          </button>
+        )}
       </div>
     </motion.div>
   );

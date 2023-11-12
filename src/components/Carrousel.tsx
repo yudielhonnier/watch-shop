@@ -40,7 +40,7 @@ const Carrousel = ({ showTypes }: ICarrousel) => {
   };
 
   return (
-    <div className=' sm:w-[100%] lg:w-[50%]'>
+    <div className='  overflow-x-hidden sm:w-[100%] lg:w-[50%]'>
       {clockTypes.length && (
         <motion.div
           variants={slideIn('right', 'tween', 0.5, 0.5)}

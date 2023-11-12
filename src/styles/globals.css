@@ -25,7 +25,32 @@
   --color-primary-700: rgb(var(--tw-color-primary-700)); /* #0369a1 */
   --color-primary-800: rgb(var(--tw-color-primary-800)); /* #075985 */
   --color-primary-900: rgb(var(--tw-color-primary-900)); /* #0c4a6e */
+
+  --primary-scroll-bar: rebeccapurple;
+  --secondary-scroll-bar: cornflowerblue;
   /* #endregion  /**======== Primary Color =========== */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-scroll-bar) var(--primary-scroll-bar);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary-scroll-bar);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-scroll-bar);
+  border-radius: 14px;
+  border: 3px solid var(--primary-scroll-bar);
 }
 
 @layer base {

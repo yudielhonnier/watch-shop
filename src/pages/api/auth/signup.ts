@@ -1,7 +1,8 @@
 import { hash } from 'bcryptjs';
 import { MongoClient } from 'mongodb';
-async function handler(req, res) {
-  //Only POST mothod is accepted
+import { NextApiRequest, NextApiResponse } from 'next';
+
+async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     //Getting email and password from body
     const { email, password } = req.body;
@@ -11,10 +12,13 @@ async function handler(req, res) {
       return;
     }
     //Connect with database
-    const client = await MongoClient.connect(`${process.env.MONGO_URI}`, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    const client = await MongoClient.connect(
+      `${process.env.MONGO_URI}`
+      // , {
+      //   useNewUrlParser: true,
+      //   useUnifiedTopology: true,
+      // }
+    );
     const db = client.db();
     //Check existing
     const checkExisting = await db

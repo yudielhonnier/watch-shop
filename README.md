@@ -28,7 +28,7 @@ The Theodorus Clarence repository is 🔋 battery packed with:
 - 🗺 Site Map — Automatically generate sitemap.xml
 - 📦 Expansion Pack — Easily install common libraries, additional components, and configs
 
-## The following configurations were added by me
+## The following configurations were added
 
 - React Testing Library (RTL)-To make unit test
 - Next-i18next - Powerfull package to internationalization based on react-i18next and i18next

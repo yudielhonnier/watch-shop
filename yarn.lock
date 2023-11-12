@@ -1844,6 +1844,11 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/bcryptjs@^2.4.6":
+  "integrity" "sha512-9xlo6R2qDs5uixm0bcIqCeMCE6HiQsIyel9KQySStiyqNl2tnj2mP3DX1Nf56MD6KMenNNlBBsy3LJ7gUEQPXQ=="
+  "resolved" "http://nexus.prod.uci.cu/repository/npm-all/@types/bcryptjs/-/bcryptjs-2.4.6.tgz"
+  "version" "2.4.6"
+
 "@types/d3-array@^3.0.3":
   "integrity" "sha512-nwvEkG9vYOc0Ic7G7kwgviY4AQlTfYGIZ0fqB7CQHXGyYM6nO7kJh5EguSNA3jfh4rq7Sb7eMVq8isuvg2/miQ=="
   "resolved" "http://nexus.uclv.edu.cu/repository/npm/@types/d3-array/-/d3-array-3.0.4.tgz"

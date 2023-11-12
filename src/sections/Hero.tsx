@@ -12,7 +12,11 @@ import { IHeroProps } from '@/constant/types';
 import { styles } from '@/styles/styles';
 
 const Hero = ({ pr, heroRef }: IHeroProps) => {
-  const [isOpenModal, openModal, closeModal] = useModal(false);
+  const [isOpenModal, openModal, closeModal]: [
+    boolean,
+    () => void,
+    () => void
+  ] = useModal();
 
   return (
     <div

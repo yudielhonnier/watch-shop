@@ -9,7 +9,7 @@ import classes from './auth-form.module.css';
 
 import Modal from '@/components/modals/Modal';
 
-async function createUser(email, password) {
+async function createUser(email: string, password: string) {
   const response = await fetch('/api/auth/signup', {
     method: 'POST',
     body: JSON.stringify({ email, password }),
@@ -27,9 +27,15 @@ async function createUser(email, password) {
   return data;
 }
 
-function AuthForm({ isOpenModal, closeModal }) {
-  const emailInputRef = useRef();
-  const passwordInputRef = useRef();
+function AuthForm({
+  isOpenModal,
+  closeModal,
+}: {
+  isOpenModal: boolean;
+  closeModal: () => void;
+}) {
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const passwordInputRef = useRef<HTMLInputElement>(null);
 
   const [isLogin, setIsLogin] = useState(true);
   const router = useRouter();
@@ -40,33 +46,45 @@ function AuthForm({ isOpenModal, closeModal }) {
     setIsLogin((prevState) => !prevState);
   }
 
-  async function submitHandler(event) {
-    event.preventDefault();
+  async function submitHandler(
+    event: React.FormEvent<HTMLFormElement> | undefined
+  ) {
+    let enteredEmail = '';
+    let enteredPassword = '';
 
-    const enteredEmail = emailInputRef.current.value;
-    const enteredPassword = passwordInputRef.current.value;
+    if (event != undefined) {
+      event.preventDefault();
 
-    // optional: Add validation
-
-    if (isLogin) {
-      const result = await signIn('credentials', {
-        redirect: false,
-        email: enteredEmail,
-        password: enteredPassword,
-      });
-
-      if (!result.error) {
-        // set some auth state
-        router.replace('/');
-        enqueueSnackbar('User logged correctly', { variant: 'success' });
+      if (emailInputRef.current != undefined) {
+        enteredEmail = emailInputRef.current.value;
       }
-    } else {
-      try {
-        const result = await createUser(enteredEmail, enteredPassword);
-        result.acknowledged &&
-          enqueueSnackbar(result.message, { variant: 'success' });
-      } catch (error) {
-        enqueueSnackbar('Problems creating the user', { variant: 'error' });
+      if (passwordInputRef.current != undefined) {
+        enteredPassword = passwordInputRef.current.value;
+      }
+
+      // optional: Add validation
+
+      if (isLogin) {
+        const result = await signIn('credentials', {
+          redirect: false,
+          email: enteredEmail,
+          password: enteredPassword,
+        });
+        if (result != null) {
+          if (!result.error) {
+            // set some auth state
+            router.replace('/');
+            enqueueSnackbar('User logged correctly', { variant: 'success' });
+          }
+        } else {
+          try {
+            const result = await createUser(enteredEmail, enteredPassword);
+            result.acknowledged &&
+              enqueueSnackbar(result.message, { variant: 'success' });
+          } catch (error) {
+            enqueueSnackbar('Problems creating the user', { variant: 'error' });
+          }
+        }
       }
     }
   }

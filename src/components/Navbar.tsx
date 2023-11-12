@@ -13,7 +13,7 @@ import { navVariants } from '@/utils/motion';
 
 import { Close, Menu, World } from '~/svg';
 
-const Navbar = ({ openModal }) => {
+const Navbar = ({ openModal }: { openModal: () => void }) => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState('home');
   // const [providers, setProviders] = useState(null);

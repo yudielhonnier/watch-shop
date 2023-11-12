@@ -1,9 +1,10 @@
-import { getSession } from 'next-auth/client';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { getSession } from 'next-auth/react';
 
 import { hashPassword, verifyPassword } from '../../../lib/auth';
-import { connectToDatabase } from '../../../lib/db';
+import { connectToDatabase } from '../../../lib/mongodb';
 
-async function handler(req, res) {
+async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'PATCH') {
     return;
   }
@@ -15,9 +16,9 @@ async function handler(req, res) {
     return;
   }
 
-  const userEmail = session.user.email;
-  const oldPassword = req.body.oldPassword;
-  const newPassword = req.body.newPassword;
+  const userEmail = session.user && session.user.email;
+  const oldPassword = req.body && req.body.oldPassword;
+  const newPassword = req.body && req.body.newPassword;
 
   const client = await connectToDatabase();
 
@@ -33,7 +34,10 @@ async function handler(req, res) {
 
   const currentPassword = user.password;
 
-  const passwordsAreEqual = await verifyPassword(oldPassword, currentPassword);
+  const passwordsAreEqual = await verifyPassword({
+    password: oldPassword,
+    hashedPassword: currentPassword,
+  });
 
   if (!passwordsAreEqual) {
     res.status(403).json({ message: 'Invalid password.' });

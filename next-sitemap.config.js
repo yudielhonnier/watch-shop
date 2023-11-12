@@ -4,8 +4,8 @@
  */
 module.exports = {
   // TODO: Change the siteUrl
-  /** Without additional '/' on the end, e.g. https://watchshop.netlify.com */
-  siteUrl: 'https://watchshop.netlify.com',
+  /** Without additional '/' on the end, e.g. https://yoursite.netlify.com */
+  siteUrl: 'https://peaceful-vacherin-ca0e33.netlify.app/',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],

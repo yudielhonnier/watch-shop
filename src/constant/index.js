@@ -83,7 +83,7 @@ export const pricing = [
 
 export const features = [
   {
-    width2: 'w-[90%]  max-w-[300px]',
+    width2: 'w-[90%]  min-w-[300px]',
     height2: 'h-[80%]',
     id: 'quality',
     name: 'Quality',
@@ -92,7 +92,7 @@ export const features = [
     haveTitle: true,
   },
   {
-    width2: 'w-[100%] max-w-[300px]',
+    width2: 'w-[100%] min-w-[300px]',
     height2: 'h-[100%]',
     name: 'Pricing',
     id: 'pricing',
@@ -101,7 +101,7 @@ export const features = [
     haveTitle: true,
   },
   {
-    width2: 'w-[90%] max-w-[300px]',
+    width2: 'w-[90%] min-w-[300px]',
     height2: 'h-[80%]',
     name: 'Wide Selection',
     id: 'wide-selection',

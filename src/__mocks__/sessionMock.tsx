@@ -8,6 +8,10 @@ export const mockSession = {
   expires: 'fake-expires',
 };
 
-export const MockSessionProvider = ({ children }) => {
+export const MockSessionProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   return <SessionProvider session={mockSession}>{children}</SessionProvider>;
 };

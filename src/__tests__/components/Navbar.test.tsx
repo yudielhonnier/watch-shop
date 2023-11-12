@@ -13,12 +13,15 @@ import { render, screen } from '@/utils/testUtils';
 describe.only('Navbar', () => {
   //to solve console.warns  IntersectionObserver not available on this device.
   beforeEach(intersectionObserverMock);
+  const mockOpenModal = () => {
+    print('opening');
+  };
 
   it.only('should render Navbar component correctly', () => {
     render(
       <MockSessionProvider>
         <I18nextProvider i18n={i18n}>
-          <Navbar />
+          <Navbar openModal={mockOpenModal} />
         </I18nextProvider>
       </MockSessionProvider>
     );

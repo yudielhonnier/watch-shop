@@ -24,7 +24,7 @@ const PricingCard = ({
             {category}
           </p>
           <p
-            className={`flex  justify-center p-4 text-custom-yellow ${styles.titles} break-words`}
+            className={`flex  justify-center p-4 text-custom-yellow ${styles.pricing} break-words`}
           >
             {range}
           </p>
